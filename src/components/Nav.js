@@ -21,7 +21,6 @@ const Nav = ({nav}) => {
     };
   });
 
-  console.log(nav, 'nav')
   return (
     <nav className={Style.navContiner}>
       <div>

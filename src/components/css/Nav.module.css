@@ -1,0 +1,27 @@
+.hamburgerContainer {
+  position: absolute;
+  right: 0;
+  margin: 5;
+}
+
+.navContiner {
+  display: flex;
+  height: 10vh;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.navUl {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.navLi {
+  padding: 0 45px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}

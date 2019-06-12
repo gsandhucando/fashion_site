@@ -40,6 +40,12 @@
   border-bottom: 1px solid gray;
 }
 
+.item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .men-items img{
   position: absolute;
   top: 15%;
@@ -51,9 +57,19 @@
 .shirt-colors {
   position: absolute;
   top: 40%;
-  left: 33%;
+  left: 34%;
+  text-align: center;
 }
 
 .shirt-colors img {
   border-radius: 50%;
+  margin-right: 5px;
+}
+
+a:active {
+  color: black;
+}
+
+a{
+  color: black;
 }

@@ -8,21 +8,24 @@ const Shirt = ({ title, price, menu }) => {
     <div className="men-items">
       <img src={shirtChange} alt="" />
     </div>
-    <div className="shirt-colors">
+    <div>
       {menu.map(item => {
        return <img
+       className='shirt-colors'
        key={item.img}
         onMouseOver={() => {
           setShirtChange(item.img);
         }}
         src={item.button}
         alt=""
-      />
+        />
       })}
-
+      <div>
       <p styple={{ fontSize: 36 }}>{title}</p>
       <p styple={{ fontSize: 32 }}>${price}</p>
+      </div>
     </div>
+
   </div>
   )
 }

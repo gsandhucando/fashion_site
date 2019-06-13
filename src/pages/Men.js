@@ -46,7 +46,10 @@ const Men = () => {
           </ul>
         ) : null}
       </div>
+      <div>
+        <Shirts />
       <Route path='/men/t-shirts' component={Shirts}/>
+      </div>
     </div>
   );
 };

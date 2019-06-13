@@ -6,7 +6,7 @@ const Shirt = ({ title, price, menu }) => {
   return(
     <div className="item-container">
     <div className="men-items">
-      <img src={shirtChange} alt="" />
+      <img  src={shirtChange} alt="" />
     </div>
     <div>
       {menu.map(item => {
@@ -21,8 +21,8 @@ const Shirt = ({ title, price, menu }) => {
         />
       })}
       <div>
-      <p styple={{ fontSize: 36 }}>{title}</p>
-      <p styple={{ fontSize: 32 }}>${price}</p>
+      <p styple={{ fontSize: 36 }}><span style={{fontWeight: '600'}}>{title}</span></p>
+      <p styple={{ fontSize: 32 }}><span style={{fontWeight: '700'}}>${price.toFixed(2)}</span></p>
       </div>
     </div>
 

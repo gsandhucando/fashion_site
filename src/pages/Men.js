@@ -46,7 +46,7 @@ const Men = () => {
           </ul>
         ) : null}
       </div>
-      <div>
+      <div className='shirts-continer'>
         <Shirts />
       <Route path='/men/t-shirts' component={Shirts}/>
       </div>

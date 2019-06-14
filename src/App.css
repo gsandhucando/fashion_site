@@ -10,35 +10,33 @@
 }
 
 .line1 {
-  height: 14px;
+  height: 11px;
   width: 15px;
-  color: black;
+  color: purple;
 }
 
 .line2 {
-  height: 14px;
-  width: 15px;
-  color: black;
+  height: 11px;
+  width: 5px;
+  color: purple;
 }
 
 /* mens page */
 
 .mens-container {
-  /* display: flex;
-  flex-direction: row; */
-  /* flex-wrap: wrap; */
-  background: gold;
+  display: grid;
+  grid-template-columns: 25vw 75vw;
+  margin: 0;
+  grid-gap: 10px;
+  height: 100vh;
   width: 100vw;
 }
 
 .sidebar {
-  /* position: relative; */
-
-  float: left;
-  height: 100vh;
-  width: 200px;
+  margin-top: 0;
+  min-width: 200px;
+  height: 100%;
   border-right: 1px solid black;
-  /* background: red; */
 }
 
 .mens-sidebar {
@@ -50,29 +48,27 @@
 .item-container {
   display: flex;
   flex-direction: column;
-}
-
-/* .men-items {
-  text-align: center;
-} */
-
-.men-items img{
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
-  height: 200px;
   width: 200px;
-  /* background: blue; */
 }
 
+
+.shirt-imgs{
+  height: 250px;
+  width: 200px;
+}
+
+.shirt-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px;
+  width: 100%;
+}
 
 
 .shirt-colors {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* flex-direction: row; */
-  /* text-align: center; */
   border-radius: 50%;
   margin-right: 5px;
 }
@@ -94,20 +90,6 @@ a{
 
 button {
   cursor: pointer;
-}
-
-.shirts-continer {
-  /* position: absolute;
-  top: 12%;
-  left: 30%; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  flex-wrap: wrap;
-  background: violet;
-  align-items: center;
-  margin: 10px;
 }
 
 .mens-sidebar:hover {

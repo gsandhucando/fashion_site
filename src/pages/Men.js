@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Route, Link } from 'react-router-dom';
 import Shirts from './Shirts';
-
+import Hoodies from './Hoodies';
+import Sunglasses from './Sunglasses';
 
 const Men = () => {
   let [mensCatelog, setMensCatelog] = useState([
     "T-shirts",
-    "Sweaters",
-    "Jeans"
+    "Hoodies",
+    "Sunglasses"
   ]);
   let [toggleOpen, setToggleOpen] = useState(false);
 
@@ -17,14 +18,14 @@ const Men = () => {
 
   return (
     <div className="mens-container">
-      <div
+      {/* <div
         style={{
           background: "black",
           width: "100vw",
           height: 1,
           marginTop: 10
         }}
-      />
+      /> */}
       <div className="sidebar">
         <p
           className="mens-sidebar"
@@ -46,9 +47,13 @@ const Men = () => {
           </ul>
         ) : null}
       </div>
-      <div className='shirts-continer'>
-        <Shirts />
-      <Route path='/men/t-shirts' component={Shirts}/>
+      <div style={{display: 'inline-block', marginRight: '25vw', width: '100%', minWidth: '600px'}}>
+      <Route exact path='/men/' component={Shirts}/>
+      <Route exact path='/men/T-shirts' component={Shirts}/>
+      <Route exact path='/men/' component={Hoodies}/>
+      <Route exact path='/men/hoodies' component={Hoodies}/>
+      <Route exact path='/men/' component={Sunglasses}/>
+      <Route exact path='/men/sunglasses' component={Sunglasses}/>
       </div>
     </div>
   );

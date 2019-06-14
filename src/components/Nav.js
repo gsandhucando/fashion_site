@@ -27,6 +27,10 @@ const Nav = ({nav}) => {
       <Link to='/'>
       <h1 style={{position: 'absolute', left: 30, fontWeight: 90}}>RAW.</h1>
       </Link>
+      { mobile ? <div className='hamburgerContainer'>
+        <div className='lime1'></div>
+        <div className='lime2'></div>
+      </div> :
       <ul className={Style.navUl}>
         {nav.map((list, index) => {
           return (
@@ -34,6 +38,7 @@ const Nav = ({nav}) => {
           <li className={Style.navLi} key={list}><Link to={`/${list}`}>{list}</Link></li>);
         })}
       </ul>
+      }
       </div>
     </nav>
   );

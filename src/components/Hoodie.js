@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-const Shirt = ({ title, price, menu }) => {
-  let [shirtChange, setShirtChange] = useState(menu[0].img);
+const Hoodie = ({ title, price, menu }) => {
+  let [hoodieChange, setHoodieChange] = useState(menu[0].img);
   return (
     <div className="item-container">
       <div className="men-items">
-        <img className="shirt-imgs" src={shirtChange} alt="" />
+        <img className="shirt-imgs" src={hoodieChange} alt="" />
       </div>
       <div>
         {menu.map(item => {
@@ -14,7 +14,7 @@ const Shirt = ({ title, price, menu }) => {
               className="shirt-colors"
               key={item.img}
               onMouseOver={() => {
-                setShirtChange(item.img);
+                setHoodieChange(item.img);
               }}
               src={item.button}
               alt=""
@@ -34,4 +34,4 @@ const Shirt = ({ title, price, menu }) => {
   );
 };
 
-export default Shirt;
+export default Hoodie;

@@ -1,7 +1,9 @@
 .hamburgerContainer {
   position: absolute;
-  right: 0;
-  margin: 5;
+  top: 10%;
+  left: 0;
+  right: 31%;
+  /* margin: 5; */
 }
 
 .navContiner {
@@ -9,6 +11,8 @@
   height: 10vh;
   justify-content: flex-end;
   align-items: flex-end;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
 }
 
 .navUl {

@@ -4,6 +4,7 @@ import Shirts from './Shirts';
 import Hoodies from './Hoodies';
 import Sunglasses from './Sunglasses';
 import Item from './Item';
+import MensItems from '../components/MensItems';
 
 const Men = () => {
   let [mensCatelog, setMensCatelog] = useState([
@@ -49,11 +50,11 @@ const Men = () => {
         ) : null}
       </div>
       <div style={{display: 'inline-block', marginRight: '25vw', width: '100%', minWidth: '600px'}}>
-      <Route exact path='/men/' component={Shirts}/>
+      <Route exact path='/men/' component={MensItems}/>
       <Route path='/men/t-shirts' component={Shirts}/>
-      <Route exact path='/men/' component={Hoodies}/>
+
       <Route path='/men/hoodies' component={Hoodies}/>
-      <Route exact path='/men/' component={Sunglasses}/>
+
       <Route path='/men/sunglasses' component={Sunglasses}/>
       </div>
     </div>

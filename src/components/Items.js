@@ -1,11 +1,16 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
-const Shirt = ({ title, price, menu }) => {
-  let [shirtChange, setShirtChange] = useState(menu[0].img);
+const Item = ({ title, price, menu, id }) => {
+  let [itemChange, setItemChange] = useState(menu[0].img);
+  let [itemId, setItemId] = useState(id+menu[0].id)
+
+  console.log(id+menu[0].id)
   return (
     <div className="item-container">
       <div className="men-items">
-        <img className="shirt-imgs" src={shirtChange} alt="" />
+      <Link to={{pathname:`item/${itemId}`, state:{price, title, id, menu}}}> <img className="shirt-imgs" src={itemChange} alt="" />
+      </Link>
       </div>
       <div>
         {menu.map(item => {
@@ -14,7 +19,8 @@ const Shirt = ({ title, price, menu }) => {
               className="shirt-colors"
               key={item.img}
               onMouseOver={() => {
-                setShirtChange(item.img);
+                setItemChange(item.img);
+                setItemId(id+item.id);
               }}
               src={item.button}
               alt=""
@@ -34,4 +40,4 @@ const Shirt = ({ title, price, menu }) => {
   );
 };
 
-export default Shirt;
+export default Item;

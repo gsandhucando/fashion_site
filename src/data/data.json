@@ -1,0 +1,132 @@
+{
+  "shirts": [
+    {
+      "id": "1",
+      "title": "RAW tee",
+      "price": 35.0,
+      "menu": [
+        { "id": "1",
+          "button": "../images/black.jpg",
+          "img": "../images/mens_shirts/raw1.jpg" },
+        {
+          "id": "2",
+          "button": "../images/white.jpg",
+          "img": "../images/mens_shirts/raw_white.jpg",
+          "frontImg": "url"
+        },
+        {
+          "id": "3",
+          "button": "../images/gray.jpg",
+          "img": "../images/mens_shirts/raw_gray.jpg"
+        },
+        {
+          "id": "4",
+          "button": "../images/dark_blue.jpg",
+          "img": "../images/mens_shirts/raw_blue.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Twin Hearts",
+      "price": 95.0,
+      "menu": [
+        {
+          "button": "../images/dark_blue.jpg",
+          "img": "../images/mens_shirts/twin_heart.jpeg"
+        },
+        {
+          "button": "../images/black.jpg",
+          "img": "../images/mens_shirts/twin_heart_black.jpeg"
+        }
+      ]
+    },
+    {
+      "title": "Single Hearts",
+      "price": 95.0,
+      "menu": [
+        {
+          "button": "../images/white.jpg",
+          "img": "../images/mens_shirts/white_heart.jpeg"
+        }
+      ]
+    },
+    {
+      "title": "Basic Tee",
+      "price": 65.0,
+      "menu": [
+        {
+          "button": "../images/black.jpg",
+          "img": "../images/mens_shirts/basic_black_round.jpg"
+        },
+        {
+          "button": "../images/white.jpg",
+          "img": "../images/mens_shirts/basic_white_round.jpg"
+        },
+        {
+          "button": "../images/gray.jpg",
+          "img": "../images/mens_shirts/basic_gray_round.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Belly Sky",
+      "price": 85.0,
+      "menu": [
+        {
+          "button": "../images/yellow.png",
+          "img": "../images/mens_shirts/belly_sky_yellow.jpeg"
+        },
+        {
+          "button": "../images/red.png",
+          "img": "../images/mens_shirts/belly_sky_red.jpeg"
+        },
+        {
+          "button": "../images/purple.png",
+          "img": "../images/mens_shirts/belly_sky_purple.jpeg"
+        }
+      ]
+    },
+    {
+      "title": "Slim Fit Henley",
+      "price": 105.0,
+      "menu": [
+        {
+          "button": "../images/blue.png",
+          "img": "../images/mens_shirts/slim_fit_henley_blue.jpeg"
+        },
+        {
+          "button": "../images/blue_iron.png",
+          "img": "../images/mens_shirts/slim_fit_henley_blue_iron.jpeg"
+        }
+      ]
+    }
+  ],
+  "hoodies": [
+    {
+      "title": "Basic Black Hoodie",
+      "price": 110.00,
+      "menu": [
+        { "button": "../images/black.jpg", "img": "../images/mens_hoodies/basic_black_hoodie.jpeg" },
+        { "button": "../images/mocha.png", "img": "../images/mens_hoodies/basic_mocha_hoodie.jpeg" },
+        { "button": "../images/volt.png", "img": "../images/mens_hoodies/basic_volt_hoodie.jpeg" }
+      ]
+    },
+    {
+      "title": "ACNE Black Hoodie",
+      "price": 150.00,
+      "menu": [
+        { "button": "../images/black.jpg", "img": "../images/mens_hoodies/acne_hoodie.jpeg" }
+      ]
+    }
+  ],
+  "sunglasses": [
+    {
+      "title": "Ray Ban \"Boyfriends\"",
+      "price": 210.00,
+      "menu": [
+        { "button": "../images/rb_black.png", "img": "../images/mens_sunglasses/rb_bf_black.jpeg" },
+        { "button": "../images/rb_brown.png", "img": "../images/mens_sunglasses/rb_bf_brown.jpeg" }
+      ]
+    }]
+}
+

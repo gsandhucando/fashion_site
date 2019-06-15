@@ -7,6 +7,7 @@ import Women from './pages/Women';
 import Cart from './pages/Cart';
 import Contact from './pages/Contact';
 import Nav from './components/Nav';
+import Item from './pages/Item';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -15,9 +16,10 @@ const MainApp = () => {
     <div>
       <Router>
         <Route path='/' render={({location}) => {
-          return <Nav nav={["MEN", "WOMEN", "CART", "CONTACT"]} location={location}/>
+          return <Nav nav={["men", "women", "cart", "contact"]} location={location}/>
         }}/>
         <Switch>
+          <Route path='/item/:id' component={Item}/>
           <Route exact path='/' component={App} />
           <Route path='/men' component={Men} />
           <Route path='/women' component={Women} />

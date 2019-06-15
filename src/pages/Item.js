@@ -1,9 +1,10 @@
 import React from "react";
 
-const Item = () => {
+const Item = (props) => {
+  console.log(props)
   return (
     <div>
-      <h4>route params</h4>
+      <h4>route params{props.match.params.id}</h4>
     </div>
   )
 }

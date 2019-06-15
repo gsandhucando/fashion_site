@@ -31,8 +31,11 @@
 .navLi {
   padding: 0 45px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 a {
   text-decoration: none;
+
 }
+

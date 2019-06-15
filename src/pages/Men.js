@@ -52,9 +52,9 @@ const Men = () => {
       <Route exact path='/men/' component={Shirts}/>
       <Route path='/men/t-shirts' component={Shirts}/>
       <Route exact path='/men/' component={Hoodies}/>
-      <Route exact path='/men/hoodies' component={Hoodies}/>
+      <Route path='/men/hoodies' component={Hoodies}/>
       <Route exact path='/men/' component={Sunglasses}/>
-      <Route exact path='/men/sunglasses' component={Sunglasses}/>
+      <Route path='/men/sunglasses' component={Sunglasses}/>
       </div>
     </div>
   );

@@ -9,17 +9,15 @@
   text-align: center;
 }
 
+
 .line1 {
-  height: 11px;
-  width: 15px;
-  color: purple;
+  height: 2px;
+  width: 20px;
+  background: purple;
+  position: relative;
+  margin: 5px;
 }
 
-.line2 {
-  height: 11px;
-  width: 5px;
-  color: purple;
-}
 
 /* mens page */
 

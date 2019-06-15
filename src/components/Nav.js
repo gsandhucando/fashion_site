@@ -15,21 +15,22 @@ const Nav = ({nav}) => {
   };
 
   useEffect(() => {
+    updateDimensions()
     window.addEventListener("resize", updateDimensions);
     return () => {
       window.removeEventListener("resize", updateDimensions);
     };
-  });
+  }, []);
 
   return (
-    <nav className={Style.navContiner}>
-      <div>
+    <nav className={mobile ? Style.navMobile : Style.navContiner}>
+
       <Link to='/'>
-      <h1 style={{position: 'absolute', left: 30, fontWeight: 90}}>RAW.</h1>
+      <h1 style={{position: 'absolute',top: 20 ,left: 30, fontWeight: 90}}>RAW.</h1>
       </Link>
-      { mobile ? <div className='hamburgerContainer'>
-        <div className='lime1'></div>
-        <div className='lime2'></div>
+      { mobile ? <div className={Style.hamburgerContainer}>
+        <div className='line1'></div>
+        <div className='line1'></div>
       </div> :
       <ul className={Style.navUl}>
         {nav.map((list, index) => {
@@ -39,7 +40,7 @@ const Nav = ({nav}) => {
         })}
       </ul>
       }
-      </div>
+
     </nav>
   );
 };

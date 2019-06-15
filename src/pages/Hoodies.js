@@ -19,7 +19,8 @@ let hoodies = [
   },
 ];
 
-const Hoodies = () => {
+const Hoodies = (props) => {
+  console.log(props)
   return (
     <div className="shirt-container">
       {hoodies.map(hoodie => {

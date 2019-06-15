@@ -3,6 +3,7 @@ import { Route, Link } from 'react-router-dom';
 import Shirts from './Shirts';
 import Hoodies from './Hoodies';
 import Sunglasses from './Sunglasses';
+import Item from './Item';
 
 const Men = () => {
   let [mensCatelog, setMensCatelog] = useState([
@@ -49,7 +50,7 @@ const Men = () => {
       </div>
       <div style={{display: 'inline-block', marginRight: '25vw', width: '100%', minWidth: '600px'}}>
       <Route exact path='/men/' component={Shirts}/>
-      <Route exact path='/men/T-shirts' component={Shirts}/>
+      <Route path='/men/t-shirts' component={Shirts}/>
       <Route exact path='/men/' component={Hoodies}/>
       <Route exact path='/men/hoodies' component={Hoodies}/>
       <Route exact path='/men/' component={Sunglasses}/>

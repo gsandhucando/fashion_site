@@ -11,8 +11,8 @@ let sunglasses = [
   },
 
 ];
-
-const Sunglasses = () => {
+const Sunglasses = (props) => {
+  console.log(props)
   return (
     <div className="shirt-container">
       {sunglasses.map(sunglass => {

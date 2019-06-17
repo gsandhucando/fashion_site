@@ -50,12 +50,20 @@
         {
           "id": "1",
           "button": "../images/dark_blue.jpg",
-          "img": "../images/mens_shirts/twin_heart.jpeg"
+          "img": "../images/mens_shirts/twin_heart.jpeg",
+          "color": "dark blue",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/fb064f61-0c8b-47b1-834b-7794dda660c1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/657b6ec4-c879-4fd0-abe8-a101a2051422.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/baa9fd51-4039-4cc5-8b31-f287ac768d92.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
         },
         {
           "id": "2",
           "button": "../images/black.jpg",
-          "img": "../images/mens_shirts/twin_heart_black.jpeg"
+          "img": "../images/mens_shirts/twin_heart_black.jpeg",
+          "color": "black",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/31adb74d-4578-41d6-a20a-0ae2f99aba3d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/456ee247-037b-4f9e-82ae-8857975e0e05.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/6eaa5b0a-2bbc-4b4c-82dc-7a128eae4737.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
         }
       ]
     },

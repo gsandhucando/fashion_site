@@ -5,24 +5,37 @@ const ChevronDown = <FontAwesomeIcon icon={faSortDown} />;
 
 let styles = {
   colorContainer: {
-    margin: "20px 0"
+    margin: "20px 0",
+    marginRight: 10,
   },
   colorBtn: {
     height: 50,
-    width: 150,
+    width: "100%",
     fontSize: 25,
     display: "flex",
     justifyContent: "space-between",
-    padding: 10
+    padding: 10,
+    border: '1px solid black',
+    background: 'white',
+    color: 'black'
   },
   colorChoise: {
     height: 50,
-    width: 150
+    width: "100%",
   },
   colorTextContent: {
     display: "flex",
     justifyContent: "center",
-    border: "1px solid grey"
+    border: "1px solid grey",
+  },
+  colorSelect: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%',
+    background: 'yellow',
+    height: '50px',
+    fontSize: '20px',
+    padding: '0 15px'
   }
 };
 
@@ -60,7 +73,7 @@ const DropDownColorMenu = ({handleColor, menu}) => {
           <button style={styles.colorChoise}>
            {
              menu.map(item => {
-               return <button key={item.color} onClick={(e)=> onSelectSize(e, item.color)} style={{width: '100%', background: 'yellow'}}>
+               return <button key={item.color} onClick={(e)=> onSelectSize(e, item.color)} style={styles.colorSelect}>
                  <img src={item.button}/>
                  <span ref={colorRef}>{item.color}</span>
                </button>

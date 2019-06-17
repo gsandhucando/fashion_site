@@ -7,14 +7,18 @@ const ChevronLeft = <FontAwesomeIcon icon={faChevronLeft} />;
 
 const styles = {
   item: {
-    display: "flex",
-    justifyContent: "space-around",
-    // background: 'red'
+    display: "grid",
+    // justifyContent: "center",
+    gridTemplateColumns: '1fr 2fr 1fr',
+    // background: 'salmon'
   },
   button: {
     height: 50,
     width: 130,
-    margin: 10
+    margin: 10,
+    background: '#333',
+    color: 'white',
+    fontSize: '20px'
   }
 };
 

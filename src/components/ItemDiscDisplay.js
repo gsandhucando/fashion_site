@@ -7,6 +7,8 @@ let styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    // display: 'grid',
+
   },
   textContainer: {
     display: 'flex',
@@ -17,14 +19,21 @@ let styles = {
   inputQuality: {
     display: 'flex',
     textAlign: 'center',
-    height: 30,
-    width: 30,
-
+    height: 50,
+    width: 50,
+    marginTop: 150,
+    fontSize: '15px'
   },
   cartBtn: {
+    display: 'flex',
+    justifyContent: 'center',
     height: 50,
-    width: 100,
-    marginTop: 30
+    width: 150,
+    marginTop: 10,
+    background: '#333333',
+    color: 'white',
+    border: 'none',
+    fontSize: '20px'
   },
   btnContainers: {
     display: 'flex',
@@ -44,7 +53,7 @@ const ItemDiscDisplay = ({ items, id }) => {
     <div style={styles.itemDiscriptionContainer}>
       <div style={styles.textContainer}>
       <h1>{items.title}</h1>
-      <p>{items.price.toFixed(2)}</p>
+      <p style={{fontSize: '30px'}}>${items.price.toFixed(2)}</p>
 
 
         <h4>{color}</h4>
@@ -54,8 +63,12 @@ const ItemDiscDisplay = ({ items, id }) => {
       <div style={styles.btnContainers}>
       <DropDownMenu />
       <DropDownColorMenu handleColor={setColor} menu={items.menu}/>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
       <input onChange={(e)=> setQuantity(e.target.value)} style={styles.inputQuality} type='number' maxLength='2' max='99' min='1' required value={quantity} />
+      </div>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
       <button style={styles.cartBtn}>Add to Cart</button>
+      </div>
       </div>
     </div>
   )

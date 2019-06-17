@@ -1,13 +1,29 @@
 import React, { useState } from "react";
+import { relative } from "path";
 
 const styles = {
+  itemContainer: {
+    display: 'flex',
+    height: '100vh',
+  },
+  imgContainer: {
+    // display: 'grid',
+    // gridTemplateRows:  '1fr 1fr 1fr',
+    // background: 'green',
+    marginTop: 30,
+    height: '85vh',
+  },
   image: {
-    height: 100,
-    width: "100%"
+    height: 200,
+    width: "170px",
+    // padding: '50px'
   },
   picture: {
-    height: 300,
-    width: 300
+    display: 'flex',
+    height: '78vh',
+    width: 350,
+    margin: 20,
+    padding: 10
   }
 };
 
@@ -20,23 +36,23 @@ const ItemImgDisplay = ({ items, id }) => {
   }
   let front = filterImg.map(img => {
     return (
-      (<div>
-        {img.frontImg ? <img onClick={() => {changePictureOnClick(img.frontImg)}} style={styles.image} src={img.frontImg} /> : null}
-        {img.sideImg ? <img onClick={() => {changePictureOnClick(img.sideImg)}} style={styles.image} src={img.sideImg} /> : null}
-        {img.backImg ? <img onClick={() => {changePictureOnClick(img.backImg)}} style={styles.image} src={img.backImg} /> : null}
+      (<div style={styles.imgContainer}>
+        {img.frontImg ? <img onClick={() => {changePictureOnClick(img.frontImg)}} style={styles.image} src={img.frontImg} alt="" /> : null}
+        {img.sideImg ? <img onClick={() => {changePictureOnClick(img.sideImg)}} style={styles.image} src={img.sideImg} alt="" /> : null}
+        {img.backImg ? <img onClick={() => {changePictureOnClick(img.backImg)}} style={styles.image} src={img.backImg} alt="" /> : null}
       </div>)
     );
   });
 
   return (
-    <section style={{ position: "flex" }}>
-      <aside style={{ height: "540px", width: 200 }}>
+    <div style={styles.itemContainer}>
+      <div style={{ height: "540px", width: 150, }}>
         <ul>
           {front}
         </ul>
-      </aside>
+      </div>
     <img style={styles.picture} src={picture} alt=""/>
-    </section>
+    </div>
   );
 };
 

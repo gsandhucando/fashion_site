@@ -6,19 +6,25 @@ const ChevronDown = <FontAwesomeIcon icon={faSortDown} />;
 let styles = {
   sizeContainer: {
     marginTop: 20,
-    background: "red"
+    marginRight: 10,
+    background: "white"
   },
   sizeBtn: {
     height: 50,
-    width: 150,
+    width: "100%",
     fontSize: 25,
     display: "flex",
     justifyContent: "space-between",
-    padding: 10
+    padding: 10,
+    marginRight: 40,
+    border: '1px solid black',
+    background: 'white',
+    color: 'black'
   },
   sizeChoices: {
     height: 50,
-    width: 150
+    width: '100%',
+    background: "white"
   },
   sizeTextContent: {
     display: "flex",

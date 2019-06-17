@@ -33,10 +33,11 @@ let styles = {
   }
 }
 
-const ItemDiscDisplay = ({ items }) => {
-  console.log(items.menu[0].color)
+const ItemDiscDisplay = ({ items, id }) => {
   let [quantity, setQuantity] = useState(1)
 
+  let filterColor = items.menu.filter(img => img.id === id.toString().slice(-1));
+  let [ color, setColor ] = useState(filterColor[0].color)
 
 
   return (
@@ -45,16 +46,15 @@ const ItemDiscDisplay = ({ items }) => {
       <h1>{items.title}</h1>
       <p>{items.price.toFixed(2)}</p>
 
-      {/* { items.menu.map(color => {
-        return <h4>{color}</h4>
-      })
-      } */}
+
+        <h4>{color}</h4>
+
       <p><span style={{fontWeight: 'bold'}}>Fit</span> True to size.</p>
       </div>
       <div style={styles.btnContainers}>
       <DropDownMenu />
-      <DropDownColorMenu />
-      <input style={styles.inputQuality} type='number' maxLength='2' max='99' min='1' required value={quantity} />
+      <DropDownColorMenu handleColor={setColor} menu={items.menu}/>
+      <input onChange={(e)=> setQuantity(e.target.value)} style={styles.inputQuality} type='number' maxLength='2' max='99' min='1' required value={quantity} />
       <button style={styles.cartBtn}>Add to Cart</button>
       </div>
     </div>

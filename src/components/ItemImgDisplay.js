@@ -1,36 +1,43 @@
-import React from 'react';
+import React, { useState } from "react";
 
 const styles = {
   image: {
     height: 100,
-    width: '100%'
+    width: "100%"
+  },
+  picture: {
+    height: 300,
+    width: 300
   }
-}
+};
 
-const ItemImgDisplay = ({items}) => {
+const ItemImgDisplay = ({ items, id }) => {
 
+  let filterImg = items.filter(img => img.id === id.toString().slice(-1));
+  let [ picture, setPicture ] = useState(filterImg[0].frontImg)
+  let changePictureOnClick = (img) => {
+    setPicture(img)
+  }
+  let front = filterImg.map(img => {
+    return (
+      (<div>
+        {img.frontImg ? <img onClick={() => {changePictureOnClick(img.frontImg)}} style={styles.image} src={img.frontImg} /> : null}
+        {img.sideImg ? <img onClick={() => {changePictureOnClick(img.sideImg)}} style={styles.image} src={img.sideImg} /> : null}
+        {img.backImg ? <img onClick={() => {changePictureOnClick(img.backImg)}} style={styles.image} src={img.backImg} /> : null}
+      </div>)
+    );
+  });
 
-  let front = items.map(img => {
-    return <img style={styles.image} src={img.frontImg}/>
-  })
-  let side = items.map(img => {
-    return <img style={styles.image} src={img.sideImg}/>
-  })
-  let back = items.map(img => {
-    return <img style={styles.image} src={img.backImg}/>
-  })
   return (
-    <section style={{position: 'flex'}}>
-      <aside style={{height: '540px', width: 200}}>
+    <section style={{ position: "flex" }}>
+      <aside style={{ height: "540px", width: 200 }}>
         <ul>
           {front}
-          {side}
-          {back}
         </ul>
       </aside>
-
+    <img style={styles.picture} src={picture} alt=""/>
     </section>
-  )
-}
+  );
+};
 
 export default ItemImgDisplay;

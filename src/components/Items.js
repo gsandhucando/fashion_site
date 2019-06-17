@@ -5,7 +5,6 @@ const Item = ({ title, price, menu, id }) => {
   let [itemChange, setItemChange] = useState(menu[0].img);
   let [itemId, setItemId] = useState(id+menu[0].id)
 
-  console.log(id+menu[0].id)
   return (
     <div className="item-container">
       <div className="men-items">

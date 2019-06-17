@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const Nav = ({nav}) => {
   let [mobile, setMobile] = useState(false);
-  let [navList, setNavList] = useState(["MEN", "WOMEN", "CART", "CONTACT"]);
 
   let updateDimensions = () => {
     if (window.innerWidth < 600) {

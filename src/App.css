@@ -20,13 +20,18 @@
 
 .contactInput {
   width: 40%;
+  height: 25px;
+}
+
+.contactTextarea{
+  width: 40%;
+  height: 60px;
 }
 
 .inputHeading {
   display: flex;
   flex-direction: row;
   /* align-self: flex-end*/
-  background: red;
 }
 
 .email-link {

@@ -4,13 +4,13 @@ let styles = {
   contactContainer: {
     display: 'flex',
     flexDirection: 'column',
-
   },
   textContainer: {
     textAlign: 'center',
     background: 'yellow',
     height: '50vh',
-    width: '100vw'
+    width: '100vw',
+    lineHeight: '2.0'
   },
   formContainer: {
     display: 'flex',
@@ -43,14 +43,17 @@ const Contact = () => {
         (916)719-9049
       </p>
       <p>
-        8:00 a.m. to 12:00 a.m., Pacific Time
+        8:00 a.m. to 12:00 a.m. Pacific Time
       </p>
       </div>
       <form style={styles.formContainer}>
-        <h4 className='inputHeading'>Name:</h4>
+        <h4 className='inputHeading'>Name<span style={{color: 'red'}}>*</span></h4>
         <input className='contactInput'/>
-        <h4>E-mail:</h4>
+        <h4>E-mail<span style={{color: 'red'}}>*</span></h4>
         <input className='contactInput'/>
+        <h4>Message<span style={{color: 'red'}}>*</span></h4>
+        <textarea type='text' className='contactTextarea'/>
+        <button>Send Message</button>
       </form>
     </div>
   )

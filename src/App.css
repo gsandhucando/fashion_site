@@ -18,6 +18,25 @@
   margin: 5px;
 }
 
+.contactInput {
+  width: 40%;
+}
+
+.inputHeading {
+  display: flex;
+  flex-direction: row;
+  /* align-self: flex-end*/
+  background: red;
+}
+
+.email-link {
+  color: blue;
+}
+
+.side-list-items {
+  margin: 10px;
+  font-size: 25px;
+}
 
 /* mens page */
 

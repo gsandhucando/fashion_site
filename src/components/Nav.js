@@ -25,7 +25,7 @@ const Nav = ({nav}) => {
     <nav className={mobile ? Style.navMobile : Style.navContiner}>
 
       <Link to='/'>
-      <h1 style={{position: 'absolute',top: 27 ,left: 30, fontWeight: 90, fontSize: 34}}>RAW.</h1>
+      <h1 style={{position: 'absolute',top: 27 ,left: 30, fontWeight: 90, fontSize: 34}}>SONU.</h1>
       </Link>
       { mobile ? <div className={Style.hamburgerContainer}>
         <div className='line1'></div>

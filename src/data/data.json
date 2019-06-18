@@ -1,48 +1,6 @@
 {
   "shirts": [
     {
-      "id": "1",
-      "title": "RAW tee",
-      "price": 35.0,
-      "menu": [
-        { "id": "1",
-          "color": "black",
-          "button": "../images/black.jpg",
-          "img": "../images/mens_shirts/raw1.jpg",
-          "frontImg": "https://img1.g-star.com/product/c_fill,f_auto,h_620,q_80/v1560417739/D08512-8415-990-Z01W/g-star-raw-holorn-t-shirt-black.jpg",
-          "sideImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560417740/D08512-8415-990-Z02W/g-star-raw-holorn-t-shirt-black.jpg",
-          "backImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560417742/D08512-8415-990-Z03W/g-star-raw-holorn-t-shirt-black.jpg"
-        },
-        {
-          "id": "2",
-          "color": "white",
-          "button": "../images/white.jpg",
-          "img": "../images/mens_shirts/raw_white.jpg",
-          "frontImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560257416/D08512-8415-110-Z01W/g-star-raw-holorn-t-shirt-white.jpg",
-          "sideImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560257418/D08512-8415-110-Z02W/g-star-raw-holorn-t-shirt-white.jpg",
-          "backImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560257421/D08512-8415-110-Z03W/g-star-raw-holorn-t-shirt-white.jpg"
-        },
-        {
-          "id": "3",
-          "color": "gray",
-          "button": "../images/gray.jpg",
-          "img": "../images/mens_shirts/raw_gray.jpg",
-          "frontImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560257433/D08512-8415-1260-Z01W/g-star-raw-holorn-t-shirt-grey.jpg",
-          "sideImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560257435/D08512-8415-1260-Z02W/g-star-raw-holorn-t-shirt-grey.jpg",
-          "backImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560257440/D08512-8415-1260-Z03W/g-star-raw-holorn-t-shirt-grey.jpg"
-        },
-        {
-          "id": "4",
-          "color": "dark blue",
-          "button": "../images/dark_blue.jpg",
-          "img": "../images/mens_shirts/raw_blue.jpg",
-          "frontImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560417754/D08512-8415-6067-Z01W/g-star-raw-holorn-t-shirt-dark-blue.jpg",
-          "sideImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560417755/D08512-8415-6067-Z02W/g-star-raw-holorn-t-shirt-dark-blue.jpg",
-          "backImg": "https://img1.g-star.com/product/c_fill,f_auto,h_550,q_80/v1560417758/D08512-8415-6067-Z03W/g-star-raw-holorn-t-shirt-dark-blue.jpg"
-        }
-      ]
-    },
-    {
       "id": "2",
       "title": "Twin Hearts",
       "price": 95.0,
@@ -75,29 +33,11 @@
         {
           "id": "1",
           "button": "../images/white.jpg",
-          "img": "../images/mens_shirts/white_heart.jpeg"
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Basic Tee",
-      "price": 65.0,
-      "menu": [
-        {
-          "id": "1",
-          "button": "../images/black.jpg",
-          "img": "../images/mens_shirts/basic_black_round.jpg"
-        },
-        {
-          "id": "2",
-          "button": "../images/white.jpg",
-          "img": "../images/mens_shirts/basic_white_round.jpg"
-        },
-        {
-          "id": "3",
-          "button": "../images/gray.jpg",
-          "img": "../images/mens_shirts/basic_gray_round.jpg"
+          "img": "../images/mens_shirts/white_heart.jpeg",
+          "color": "white",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/4f6d1abe-e2b8-4f62-a8a8-ca00b695ed53.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/f5913336-1666-4090-b91b-4cc898ccbbe3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/516d24cf-0c57-44fd-864a-f0225a5210da.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
         }
       ]
     },
@@ -109,17 +49,29 @@
         {
           "id": "1",
           "button": "../images/yellow.png",
-          "img": "../images/mens_shirts/belly_sky_yellow.jpeg"
+          "img": "../images/mens_shirts/belly_sky_yellow.jpeg",
+          "color": "yellow",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/06d5ee06-f6d4-42df-bc20-a252a4086807.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/0fe6ffe3-2c7e-4b57-afe0-616f509614c0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/75375bd7-8d5a-4fb8-a4a6-98d2003959ba.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
         },
         {
           "id": "2",
           "button": "../images/red.png",
-          "img": "../images/mens_shirts/belly_sky_red.jpeg"
+          "img": "../images/mens_shirts/belly_sky_red.jpeg",
+          "color": "red",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/9c3168eb-c1c7-42a0-933c-be4c260464f7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/9cc1d3f1-5107-4f6e-b95a-858095892ce6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/9b5272d3-d2db-48fb-baae-b78de911d109.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
         },
         {
           "id": "3",
           "button": "../images/purple.png",
-          "img": "../images/mens_shirts/belly_sky_purple.jpeg"
+          "img": "../images/mens_shirts/belly_sky_purple.jpeg",
+          "color": "purple",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/d850158a-60a9-48fc-bbed-9524b528e3f0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/5d4bfb84-3b9a-4db0-b6eb-2e5b76956ba8.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/17bab984-a796-497a-9f5d-0c6efe11c0d3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
         }
       ]
     },
@@ -131,12 +83,20 @@
         {
           "id": "1",
           "button": "../images/blue.png",
-          "img": "../images/mens_shirts/slim_fit_henley_blue.jpeg"
+          "img": "../images/mens_shirts/slim_fit_henley_blue.jpeg",
+          "color": "blue",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/04a19dbc-bebf-4583-90dd-4a3412200aeb.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/ca01e62f-c86c-42d0-a94d-2485d8b0a02b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/75795b6e-ae38-4b83-a78f-908c3a561128.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
         },
         {
           "id": "2",
           "button": "../images/blue_iron.png",
-          "img": "../images/mens_shirts/slim_fit_henley_blue_iron.jpeg"
+          "img": "../images/mens_shirts/slim_fit_henley_blue_iron.jpeg",
+          "color": "blue iron",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/52af8e6b-b36a-4809-9ca0-c5de38ff8def.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/9bb70666-b99a-46c7-acb9-40ab29f3c976.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/f88eb881-7183-4fb4-86b3-01ac974114ac.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
         }
       ]
     }
@@ -147,9 +107,30 @@
       "title": "Basic Black Hoodie",
       "price": 110.00,
       "menu": [
-        { "id": "1", "button": "../images/black.jpg", "img": "../images/mens_hoodies/basic_black_hoodie.jpeg" },
-        { "id": "2", "button": "../images/mocha.png", "img": "../images/mens_hoodies/basic_mocha_hoodie.jpeg" },
-        { "id": "3", "button": "../images/volt.png", "img": "../images/mens_hoodies/basic_volt_hoodie.jpeg" }
+        { "id": "1",
+          "button": "../images/black.jpg",
+          "img": "../images/mens_hoodies/basic_black_hoodie.jpeg",
+          "color": "black",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/d3372e49-d7c2-46f3-bcc1-406fff3c224c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/cefb5262-2560-4d88-9cdc-ba945c0de848.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/9c9997e9-eced-4b8f-bc2a-bb6db0db4be6.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+         },
+        { "id": "2",
+          "button": "../images/mocha.png",
+          "img": "../images/mens_hoodies/basic_mocha_hoodie.jpeg",
+          "color": "mocha",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/b9ab695c-0e68-4c46-ba95-e54ecff194ad.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/72ba196c-bd9b-4753-8c1e-d41346725053.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/06eaf53b-6b54-418b-8ad2-8ef3a11ec189.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        },
+        { "id": "3",
+          "button": "../images/volt.png",
+          "img": "../images/mens_hoodies/basic_volt_hoodie.jpeg",
+          "color": "volt",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/a49d325b-9cfc-41d7-a416-7461248ac302.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/75bfc7eb-dd87-4b74-9765-e261ffa982b7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/857ff03b-6c18-48f8-9803-7efb4f47a500.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        }
       ]
     },
     {
@@ -157,7 +138,14 @@
       "title": "ACNE Black Hoodie",
       "price": 150.00,
       "menu": [
-        {  "id": "1", "button": "../images/black.jpg", "img": "../images/mens_hoodies/acne_hoodie.jpeg" }
+        {  "id": "1",
+          "button": "../images/black.jpg",
+          "img": "../images/mens_hoodies/acne_hoodie.jpeg",
+          "color": "black",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/c578e3c8-8aa4-484e-b0e8-4b0dfe0fdbd3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/8b8b6411-a614-40c4-8f52-000a6993883a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/1179308b-f10c-41d9-84a7-5af1618d929b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        }
       ]
     }
   ],
@@ -167,8 +155,22 @@
       "title": "Ray Ban \"Boyfriends\"",
       "price": 210.00,
       "menu": [
-        { "id": "1", "button": "../images/rb_black.png", "img": "../images/mens_sunglasses/rb_bf_black.jpeg" },
-        { "id": "2", "button": "../images/rb_brown.png", "img": "../images/mens_sunglasses/rb_bf_brown.jpeg" }
+        { "id": "1",
+          "button": "../images/rb_black.png",
+          "img": "../images/mens_sunglasses/rb_bf_black.jpeg",
+          "color": "black",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/fd297c8e-fb28-4110-b0a8-62064f56f12f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/f941b1e7-a645-4cec-aa1e-180ae1da6570.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/b0a6e319-0961-4ae8-8089-ea4bfc278a10.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        },
+        { "id": "2",
+          "button": "../images/rb_brown.png",
+          "img": "../images/mens_sunglasses/rb_bf_brown.jpeg",
+          "color": "brown",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/425ded02-f64c-4716-a22e-211b78445c1b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/b05e3683-d97d-4966-9cea-381269b1bc6a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/b0a6e319-0961-4ae8-8089-ea4bfc278a10.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        }
       ]
     }]
 }

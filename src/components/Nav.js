@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import Style from "./css/Nav.module.css";
 import { Link } from "react-router-dom";
 
-const Nav = ({nav}) => {
+const Nav = ({nav}, props) => {
   let [mobile, setMobile] = useState(false);
+
+  console.log(props, 'nav')
 
   let updateDimensions = () => {
     if (window.innerWidth < 600) {

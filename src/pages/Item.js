@@ -58,6 +58,9 @@ const styles = {
 const Item = props => {
   let [toggleClick, setToggleClick] = useState(false);
 
+  console.log(props);
+
+
   let checkoutPreview = () => {
     setToggleClick(true);
     console.log("clicked");

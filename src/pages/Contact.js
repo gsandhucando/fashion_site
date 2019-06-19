@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { stringLiteral } from '@babel/types';
 
 let styles = {
@@ -28,10 +28,23 @@ let styles = {
     margin: 10,
     padding: 5,
     fontSize: '1.0em'
+  },
+  messageSent: {
+    textAlign: 'center',
+  },
+  messageDiv: {
+    display: 'flex',
+    justifyContent: 'center'
   }
 }
 
 const Contact = () => {
+  let [ message, setmessage ] = useState(false)
+
+  let messageSent = () => {
+    setmessage(true)
+  }
+
   return (
     <div style={styles.contactContainer}>
       <div style={styles.textContainer}>
@@ -55,6 +68,7 @@ const Contact = () => {
         8:00 a.m. to 12:00 a.m. Pacific Time
       </p>
       </div>
+      {message ? <div style={styles.messageDiv}> <h3 style={styles.messageSent}>Message sent thank you.</h3> </div> :
       <form style={styles.formContainer}>
         <p className='inputHeading'>Name<span style={{color: 'red'}}>*</span></p>
         <input className='contactInput' required='required' type='text' placeholder='Please enter name' />
@@ -62,8 +76,9 @@ const Contact = () => {
         <input className='contactInput' required='required' type='email' placeholder='Please enter email' />
         <p>Message<span style={{color: 'red'}}>*</span></p>
         <textarea type='text' className='contactTextarea' placeholder='Please enter message' />
-        <button style={styles.submitBtn}>Send Message</button>
+        <button onClick={messageSent} style={styles.submitBtn}>Send Message</button>
       </form>
+      }
     </div>
   )
 }

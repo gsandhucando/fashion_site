@@ -20,7 +20,7 @@ let styles = {
     textAlign: "center",
     height: 50,
     width: 50,
-    marginTop: 150,
+    marginTop: 90,
     fontSize: "15px"
   },
   cartBtn: {

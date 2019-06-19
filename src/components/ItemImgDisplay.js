@@ -34,9 +34,9 @@ const ItemImgDisplay = ({ items, id }) => {
   let changePictureOnClick = (img) => {
     setPicture(img)
   }
-  let front = filterImg.map(img => {
+  let front = filterImg.map((img, i) => {
     return (
-      (<div style={styles.imgContainer}>
+      (<div key={i} style={styles.imgContainer}>
         {img.frontImg ? <img onClick={() => {changePictureOnClick(img.frontImg)}} style={styles.image} src={img.frontImg} alt="" /> : null}
         {img.sideImg ? <img onClick={() => {changePictureOnClick(img.sideImg)}} style={styles.image} src={img.sideImg} alt="" /> : null}
         {img.backImg ? <img onClick={() => {changePictureOnClick(img.backImg)}} style={styles.image} src={img.backImg} alt="" /> : null}

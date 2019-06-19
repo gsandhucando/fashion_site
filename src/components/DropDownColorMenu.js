@@ -60,6 +60,7 @@ const DropDownColorMenu = ({handleColor, menu}) => {
     setColor(color);
     handleColor(color)
     setOpen(false);
+    console.log(color)
   };
 
   return (

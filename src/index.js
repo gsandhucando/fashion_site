@@ -8,6 +8,7 @@ import Cart from './pages/Cart';
 import Contact from './pages/Contact';
 import Nav from './components/Nav';
 import Item from './pages/Item';
+import Checkout from './pages/Checkout';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -23,6 +24,7 @@ const MainApp = () => {
           <Route path='/item/:id' component={Item}/>
           <Route exact path='/men/item/:id' component={Item}/>
           <Route exact path='/women/item/:id' component={Item}/>
+          <Route exact path='/checkout' component={Checkout}/>
           <Route path='/men' component={Men} />
           <Route path='/women' component={Women} />
           <Route path='/cart' component={Cart} />

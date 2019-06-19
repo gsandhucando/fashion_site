@@ -19,8 +19,8 @@ const MainApp = () => {
           return <Nav nav={["men", "women", "cart", "contact"]} location={location}/>
         }}/>
         <Switch>
-          <Route path='/item/:id' component={Item}/>
           <Route exact path='/' component={App} />
+          <Route path='/item/:id' component={Item}/>
           <Route path='/men' component={Men} />
           <Route path='/women' component={Women} />
           <Route path='/cart' component={Cart} />

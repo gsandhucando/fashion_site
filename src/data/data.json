@@ -7,7 +7,7 @@
       "menu": [
         {
           "id": "1",
-          "button": "../images/dark_blue.jpg",
+          "button": "../images/dark_blue.png",
           "img": "../images/mens_shirts/twin_heart.jpeg",
           "color": "dark blue",
           "frontImg": "https://n.nordstrommedia.com/id/sr3/fb064f61-0c8b-47b1-834b-7794dda660c1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
@@ -16,7 +16,7 @@
         },
         {
           "id": "2",
-          "button": "../images/black.jpg",
+          "button": "../images/black.png",
           "img": "../images/mens_shirts/twin_heart_black.jpeg",
           "color": "black",
           "frontImg": "https://n.nordstrommedia.com/id/sr3/31adb74d-4578-41d6-a20a-0ae2f99aba3d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
@@ -32,7 +32,7 @@
       "menu": [
         {
           "id": "1",
-          "button": "../images/white.jpg",
+          "button": "../images/white.png",
           "img": "../images/mens_shirts/white_heart.jpeg",
           "color": "white",
           "frontImg": "https://n.nordstrommedia.com/id/sr3/4f6d1abe-e2b8-4f62-a8a8-ca00b695ed53.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
@@ -108,7 +108,7 @@
       "price": 110.00,
       "menu": [
         { "id": "1",
-          "button": "../images/black.jpg",
+          "button": "../images/black.png",
           "img": "../images/mens_hoodies/basic_black_hoodie.jpeg",
           "color": "black",
           "frontImg": "https://n.nordstrommedia.com/id/sr3/d3372e49-d7c2-46f3-bcc1-406fff3c224c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
@@ -139,7 +139,7 @@
       "price": 150.00,
       "menu": [
         {  "id": "1",
-          "button": "../images/black.jpg",
+          "button": "../images/black.png",
           "img": "../images/mens_hoodies/acne_hoodie.jpeg",
           "color": "black",
           "frontImg": "https://n.nordstrommedia.com/id/sr3/c578e3c8-8aa4-484e-b0e8-4b0dfe0fdbd3.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
@@ -172,6 +172,161 @@
           "backImg": "https://n.nordstrommedia.com/id/sr3/b0a6e319-0961-4ae8-8089-ea4bfc278a10.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
         }
       ]
-    }]
+    }],
+    "tops": [
+      {
+        "id": "10",
+      "title": "Cozy Muscle Tank",
+      "price": 31.00,
+      "menu": [
+        { "id": "1",
+          "button": "../images/green_lake.png",
+          "img": "../images/womens_tops/cozy_muscle_tank.jpeg",
+          "color": "green lake",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/e0e61d4e-505a-4676-81ca-49f10cb27576.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/afa57f50-b5dd-4c2c-b2b6-cf16c8e85cb1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/550deeb8-bb5e-49c4-af60-32a72c385b60.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        },
+        { "id": "2",
+          "button": "../images/hot_pink.png",
+          "img": "../images/womens_tops/cozy_muscle_tank_hotpink.jpeg",
+          "color": "green lake",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/ceae87cf-7073-46e3-a234-81aed2066d32.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/c8670101-d16d-485a-9d55-a323da3bbf28.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/d2c01f25-c6f8-49d2-b2cc-4a37747c6101.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        }
+      ]},
+      {
+        "id": "11",
+      "title": "Poppy Puff Tank",
+      "price": 42.00,
+      "menu": [
+        { "id": "1",
+          "button": "../images/white.png",
+          "img": "../images/womens_tops/poppy_puff.jpeg",
+          "color": "white",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/a9f16ab4-892e-40c9-ae39-a89065fc95a7.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/2aabf30a-eb26-4bf7-a353-4bcb4a03cfd1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/57025db2-9bcc-4d6f-966d-1cacbbb76ce8.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        },
+        { "id": "2",
+          "button": "../images/yellow.png",
+          "img": "../images/womens_tops/poppy_puff_yellow.jpeg",
+          "color": "yellow",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/75d07c34-d1aa-4a57-8934-54c5f103fdc4.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/3c2f6fda-3f09-4fce-bf5a-44de73cae84f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/be6e41fa-d459-4fc5-8c2b-ae5a59bd236d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        },
+        { "id": "3",
+          "button": "../images/mint_ice.png",
+          "img": "../images/womens_tops/poppy_puff_mintice.jpeg",
+          "color": "mint ice",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/eadfccf7-5f83-432e-81a0-b43686b35eca.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/46e89520-8e07-4f56-b729-4bdfad5c8f2e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/1a14b5bb-9d29-40dc-9815-c7e201ce841e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        }
+      ]},
+      {
+        "id": "12",
+      "title": "Modal V-Neck",
+      "price": 70.00,
+      "menu": [
+        { "id": "1",
+          "button": "../images/red.png",
+          "img": "../images/womens_tops/modal_v-neck.jpeg",
+          "color": "red",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/a363d75d-22d9-49e2-8aff-85cc09b637bd.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/e1758304-e7ca-4b6f-a634-0cc6d5ce721f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/829875f5-8b80-4dfd-bbe5-373246f6c536.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        },
+        { "id": "2",
+          "button": "../images/navy_stripes.png",
+          "img": "../images/womens_tops/modal_v-neck-stripes.jpeg",
+          "color": "navy Multi stripe",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/5057a5ee-b678-4c60-a34c-d45ede87b09e.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/b3bfffaf-72ae-4720-a845-0ebfcf1e4aae.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/82eb7912-586d-431f-b952-cd6eb6bb0753.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        }
+      ]},
+      {
+        "id": "13",
+      "title": "Modal V-Neck",
+      "price": 65.00,
+      "menu": [
+        { "id": "1",
+          "button": "../images/true_navy.png",
+          "img": "../images/womens_tops/sonoma_v-neck.jpeg",
+          "color": "true navy",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/13d93288-b22a-44f5-927e-743917d8d4e0.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/58262d60-d871-408f-b8f0-9de282e30928.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/d0c5196d-ef0b-44e1-9a56-cb2d739ddc1a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        },
+        { "id": "2",
+          "button": "../images/pop_pink.png",
+          "img": "../images/womens_tops/sonoma_v-neck-poppink.jpeg",
+          "color": "navy Multi stripe",
+          "frontImg": "https://n.nordstrommedia.com/id/sr3/249a248a-81d5-4560-88c1-b7f67ae56f9b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "sideImg": "https://n.nordstrommedia.com/id/sr3/6dc8b372-c51c-4b7e-b4ac-d28c80e239ed.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+          "backImg": "https://n.nordstrommedia.com/id/sr3/bad69f23-103f-4b5c-a39d-d800d065c6b9.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+        }
+      ]}
+    ],
+    "womens_hoodies": [
+      {
+        "id": "14",
+        "title": "Clarity Long Sleeve Hoodie",
+        "price": 88.00,
+        "menu": [
+          { "id": "1",
+            "button": "../images/black.png",
+            "img": "../images/womens_hoodies/clarity_long_sleeve.jpeg",
+            "color": "black",
+            "frontImg": "https://n.nordstrommedia.com/id/sr3/4f7f1f7d-e545-4d36-a832-fdfb6dc34357.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+            "sideImg": "https://n.nordstrommedia.com/id/sr3/49d3dd59-581c-41a8-8464-65e728cb75fe.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+            "backImg": "https://n.nordstrommedia.com/id/sr3/ad4ab380-3ae1-46ce-bae5-5ec6391bb763.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+           }
+        ]
+      },
+      {
+        "id": "15",
+        "title": "Zella Hoodie",
+        "price": 110.00,
+        "menu": [
+          { "id": "1",
+            "button": "../images/grey_wolf.png",
+            "img": "../images/womens_hoodies/zella_hoodie.jpeg",
+            "color": "grey wolf",
+            "frontImg": "https://n.nordstrommedia.com/id/sr3/3a6cf22e-1900-4fd2-b9b0-e7e264efc84a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+            "sideImg": "https://n.nordstrommedia.com/id/sr3/29dc8b96-fefb-4358-85dd-beb879059d42.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+            "backImg": "https://n.nordstrommedia.com/id/sr3/56b11853-9490-4833-9aa4-1eaeffcb2232.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+           },
+           { "id": "2",
+            "button": "../images/pink_chintz.png",
+            "img": "../images/womens_hoodies/zella_hoodie_pink.jpeg",
+            "color": "pink chintz",
+            "frontImg": "https://n.nordstrommedia.com/id/sr3/14d564b5-44eb-4566-b8a9-2bc62683106b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+            "sideImg": "https://n.nordstrommedia.com/id/sr3/dc4f2d23-ce61-43fd-8376-b2bb75c3f3ea.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+            "backImg": "https://n.nordstrommedia.com/id/sr3/82f6c99f-d375-4d6b-ba99-f71a609cb410.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+           }
+        ]
+      }
+    ],
+    "womens_sunglasses": [
+      {
+        "id": "16",
+        "title": "Versace Mirrored Sunglasses",
+        "price": 300.00,
+        "menu": [
+          { "id": "1",
+            "button": "../images/gold.png",
+            "img": "../images/womens_sunglasses/versace_mirrored_glasses.jpeg",
+            "color": "gold",
+            "frontImg": "https://n.nordstrommedia.com/id/sr3/5175b7ca-fea1-4c1b-9941-68883da26dc5.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+            "sideImg": "https://n.nordstrommedia.com/id/sr3/a25c3abb-6d54-4197-8b82-d0fb5c9bac7c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60",
+            "backImg": "https://n.nordstrommedia.com/id/sr3/c2a2c27e-2816-445c-89a2-267d45f14762.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2&quality=60"
+           }
+        ]
+      }
+    ]
 }
 

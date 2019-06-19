@@ -25,14 +25,14 @@ const styles = {
 const Item = props => {
   let id = props.match.params.id;
 
-  console.log(props);
+  let price = props.location.state.price;
   return (
     <div style={styles.item}>
       <button onClick={() => props.history.goBack()} style={styles.button}>
         {ChevronLeft} back
       </button>
       <ItemImgDisplay id={id} items={props.location.state.menu} />
-      <ItemDiscDisplay id={id} items={props.location.state} />
+      <ItemDiscDisplay id={id} price={price} items={props.location.state} />
     </div>
   );
 };

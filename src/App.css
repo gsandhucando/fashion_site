@@ -21,16 +21,19 @@
 .contactInput {
   width: 40%;
   height: 25px;
+  font-size: 1.0em;
 }
 
 .contactTextarea{
   width: 40%;
-  height: 60px;
+  height: 300px;
+  font-size: 1.0em;
 }
 
 .inputHeading {
   display: flex;
   flex-direction: row;
+  font-size: 1.0em;
   /* align-self: flex-end*/
 }
 

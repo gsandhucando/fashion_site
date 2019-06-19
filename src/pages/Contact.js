@@ -1,4 +1,5 @@
 import React from 'react';
+import { stringLiteral } from '@babel/types';
 
 let styles = {
   contactContainer: {
@@ -7,18 +8,26 @@ let styles = {
   },
   textContainer: {
     textAlign: 'center',
-    background: 'yellow',
     height: '50vh',
     width: '100vw',
-    lineHeight: '2.0'
+    lineHeight: '2.5'
   },
   formContainer: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    background: 'aqua',
-    height: '30vh',
+    height: '40vh',
     width: '100vw'
+  },
+  submitBtn: {
+    height: '120px',
+    width: '150px',
+    border: 'none',
+    background: '#333',
+    color: 'white',
+    margin: 10,
+    padding: 5,
+    fontSize: '1.0em'
   }
 }
 
@@ -40,20 +49,20 @@ const Contact = () => {
         <a className='email-link' href="# " >gsandhu916@gmail.com</a>
       </p>
       <p>
-        (916)719-9049
+        (916) 719-9049
       </p>
       <p>
         8:00 a.m. to 12:00 a.m. Pacific Time
       </p>
       </div>
       <form style={styles.formContainer}>
-        <h4 className='inputHeading'>Name<span style={{color: 'red'}}>*</span></h4>
-        <input className='contactInput'/>
-        <h4>E-mail<span style={{color: 'red'}}>*</span></h4>
-        <input className='contactInput'/>
-        <h4>Message<span style={{color: 'red'}}>*</span></h4>
-        <textarea type='text' className='contactTextarea'/>
-        <button>Send Message</button>
+        <p className='inputHeading'>Name<span style={{color: 'red'}}>*</span></p>
+        <input className='contactInput' required='required' type='text' placeholder='Please enter name' />
+        <p>E-mail<span style={{color: 'red'}}>*</span></p>
+        <input className='contactInput' required='required' type='email' placeholder='Please enter email' />
+        <p>Message<span style={{color: 'red'}}>*</span></p>
+        <textarea type='text' className='contactTextarea' placeholder='Please enter message' />
+        <button style={styles.submitBtn}>Send Message</button>
       </form>
     </div>
   )

@@ -41,8 +41,9 @@ let styles = {
   }
 };
 
-const ItemDiscDisplay = ({ items, id, price }) => {
+const ItemDiscDisplay = ({ items, id, price, toggleClick }) => {
   let [quantity, setQuantity] = useState(1);
+
 
   let filterColor = items.menu.filter(
     img => img.id === id.toString().slice(-1)
@@ -77,7 +78,7 @@ const ItemDiscDisplay = ({ items, id, price }) => {
           />
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <button style={styles.cartBtn}>Add to Cart</button>
+          <button onClick={toggleClick} style={styles.cartBtn}>Add to Cart</button>
         </div>
       </div>
     </div>

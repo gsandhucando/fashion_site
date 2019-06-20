@@ -29,7 +29,7 @@ const styles = {
 
 const ItemImgDisplay = ({ items, id }) => {
 
-  let filterImg = items.filter(img => img.id === id.toString().slice(-1));
+  let filterImg = items.filter(img => img._id === id);
   let [ picture, setPicture ] = useState(filterImg[0].frontImg)
   let changePictureOnClick = (img) => {
     setPicture(img)

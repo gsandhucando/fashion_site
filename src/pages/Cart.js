@@ -16,7 +16,8 @@ let styles = {
     background: 'black',
     color: 'white',
     fontSize: '20px'
-  }
+  },
+
 }
 
 let Cart = (props) => {

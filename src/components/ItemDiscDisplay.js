@@ -46,7 +46,7 @@ const ItemDiscDisplay = ({ items, id, price, toggleClick }) => {
 
 
   let filterColor = items.menu.filter(
-    img => img.id === id.toString().slice(-1)
+    img => img._id === id
   );
   let [color, setColor] = useState(filterColor[0].color);
 

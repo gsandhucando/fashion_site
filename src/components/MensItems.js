@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Items from './Items';
-import { shirts, hoodies, sunglasses } from '../data/data.json';
+import axios from 'axios';
 
-let allItems = []
 
 const MensItems = () => {
+  let [ mensItems, setMensItems ] = useState([])
+
+  useEffect(()=> {
+    axios.get('http://localhost:3001/api/items?category=shirts,hoodies,sunglasses').then(res => {
+      if (res.status !== 200) {
+        throw new Error(res.data.message)
+      }
+      console.log(res.data)
+      setMensItems(res.data)
+    }).catch((err) => console.log(err))
+  }, [])
+
   return (
     <div className='shirt-container'>
-      {allItems.concat(shirts, hoodies, sunglasses).map(item => {
-        return <Items key={item.title} {...item}/>
+      {mensItems.map(item => {
+        return <Items key={item._id} {...item}/>
       })}
     </div>
   )

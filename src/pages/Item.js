@@ -5,6 +5,7 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import ItemImgDisplay from "../components/ItemImgDisplay";
 import ItemDiscDisplay from "../components/ItemDiscDisplay";
 import { mixedTypeAnnotation } from "@babel/types";
+import Modal from '../components/Modal';
 const ChevronLeft = <FontAwesomeIcon icon={faChevronLeft} />;
 
 const styles = {
@@ -22,37 +23,7 @@ const styles = {
     color: "white",
     fontSize: "20px"
   },
-  moddle: {
-    background: "rgba(0,0,0,0.5)",
-    position: "absolute",
-    top: "0%",
-    height: "100vh",
-    width: "100vw",
-    // display: 'flex',
-    // flexDirection: 'column',
-    // justifyContent: 'center',
-  },
-  moddleCard: {
-    position: 'absolute',
-    display: 'flex',
-    flexDirection: 'column',
-    lineHeight: '3.5em',
-    textAlign: 'center',
-    top: '50%',
-    left: '50%',
-    height: '600px',
-    width: '600px',
-    background: 'white',
-    transform: 'translate(-50%, -50%)',
-    padding: '10px'
-  },
-  checkoutBtn: {
-    height: '50px',
-    width: '150px',
-    background: 'black',
-    color: 'white',
-    fontSize: '20px',
-  }
+
 };
 
 const Item = props => {
@@ -74,19 +45,7 @@ const Item = props => {
   let price = props.location.state.price
 
 
-  let moddle = <div onClick={exitCheckoutPreview} style={styles.moddle}>
-    <div style={styles.moddleCard}>
-      <h1>You've got great taste!</h1>
-      <p>Added to your cart.</p>
-      <p>{title}</p>
-      <p>${price.toFixed(2)}</p>
-      <div>
-      <Link to="/checkout">
-      <button style={styles.checkoutBtn}>Checkout</button>
-      </Link>
-      </div>
-    </div>
-  </div>;
+
 
   let id = props.match.params.id;
 
@@ -94,7 +53,7 @@ const Item = props => {
 
   return (
     <div style={styles.item}>
-      {toggleClick ? moddle : null}
+      {toggleClick ? <Modal exitCheckoutPreview={exitCheckoutPreview} title={title} price={price} /> : null}
       <button onClick={() => props.history.goBack()} style={styles.button}>
         {ChevronLeft} back
       </button>

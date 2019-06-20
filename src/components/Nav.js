@@ -2,6 +2,20 @@ import React, { useEffect, useState } from "react";
 import Style from "./css/Nav.module.css";
 import { Link } from "react-router-dom";
 
+let styles= {
+  itemDisplay: {
+    position: 'absolute',
+    height: '25px',
+    width: '25px',
+    borderRadius: '50%',
+    background: 'red',
+    top: '6%',
+    right: '14%',
+    textAlign: 'center',
+    color: 'white'
+  }
+}
+
 const Nav = ({nav}, props) => {
   let [mobile, setMobile] = useState(false);
 
@@ -25,6 +39,7 @@ const Nav = ({nav}, props) => {
 
   return (
     <nav className={mobile ? Style.navMobile : Style.navContiner}>
+            <div style={styles.itemDisplay}>1</div>
 
       <Link to='/'>
       <h1 style={{position: 'absolute',top: 27 ,left: 30, fontWeight: 90, fontSize: 34}}>SONU.</h1>

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
-const Item = ({ title, price, menu, id }) => {
+const Item = ({ title, price, menu, _id }) => {
   let [itemChange, setItemChange] = useState(menu[0].img);
-  let [itemId, setItemId] = useState(id+menu[0].id)
+  let [itemId, setItemId] = useState(menu[0]._id)
 
   return (
     <div className="item-container">
       <div className="men-items">
-      <Link to={{pathname:`item/${itemId}`, state:{price, title, id, menu}}}> <img className="shirt-imgs" src={itemChange} alt="" />
+      <Link to={{pathname:`item/${itemId}`, state:{price, title, _id, menu}}}> <img className="shirt-imgs" src={itemChange} alt="" />
       </Link>
       </div>
       <div>
@@ -19,7 +19,7 @@ const Item = ({ title, price, menu, id }) => {
               key={item.img}
               onMouseOver={() => {
                 setItemChange(item.img);
-                setItemId(id+item.id);
+                setItemId(item._id);
               }}
               src={item.button}
               alt=""

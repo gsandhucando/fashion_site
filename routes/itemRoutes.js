@@ -2,7 +2,7 @@ let router = require('express').Router();
 let itemModel = require('../models/item');
 
 router.route('/items').get((req, res) => {
-  console.log(req.query)
+  console.log(req.query, 'query*******')
   let itemQueries = req.query.category.split(',').map(category => ({category: {$eq : category}}))
   console.log(itemQueries)
   itemModel.find({$or : itemQueries}).then(items => {

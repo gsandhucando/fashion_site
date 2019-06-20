@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 let styles = {
-  moddle: {
+  modal: {
     background: "rgba(0,0,0,0.5)",
     position: "absolute",
     top: "0%",
@@ -12,7 +12,7 @@ let styles = {
     // flexDirection: 'column',
     // justifyContent: 'center',
   },
-  moddleCard: {
+  modalCard: {
     position: 'absolute',
     display: 'flex',
     flexDirection: 'column',
@@ -35,10 +35,10 @@ let styles = {
   }
 }
 
-let Moddle = (props) => {
+let Modal = (props) => {
   return(
-<div onClick={props.exitCheckoutPreview} style={styles.moddle}>
-    <div style={styles.moddleCard}>
+<div onClick={props.exitCheckoutPreview} style={styles.modal}>
+    <div style={styles.modalCard}>
       <h1>You've got great taste!</h1>
       <p>Added to your cart.</p>
       <p>{props.title}</p>
@@ -53,4 +53,4 @@ let Moddle = (props) => {
   )
 }
 
-export default Moddle;
+export default Modal;

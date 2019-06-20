@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Items from "../components/Items";
-import { shirts } from '../data/data.json';
 import axios from 'axios';
 
 
@@ -12,7 +11,7 @@ const Shirts = () => {
       if (res.status !== 200) {
         throw new Error(res.data.message)
       }
-      console.log(res.data)
+      console.log(res.data, 'shirts ********')
       setShirts(res.data)
     }).catch((err) => console.log(err))
   }, [])

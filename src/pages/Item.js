@@ -30,6 +30,7 @@ const Item = props => {
   let [toggleClick, setToggleClick] = useState(false);
   let [ currentId, setCurrentId ] = useState(props.location.state.menu[0]._id)
   let [ currentSize, setCurrentSize ] = useState('S')
+  let [ quantity, setQuantity] = useState(1)
 
   console.log(props);
 
@@ -53,7 +54,7 @@ const Item = props => {
 
   return (
     <div style={styles.item}>
-      {toggleClick ? <Modal size={currentSize} exitCheckoutPreview={exitCheckoutPreview} title={title} price={price} currentId={currentId} pictures={props.location.state.menu.find((pic)=> {
+      {toggleClick ? <Modal quantity={quantity} size={currentSize} exitCheckoutPreview={exitCheckoutPreview} title={title} price={price} currentId={currentId} pictures={props.location.state.menu.find((pic)=> {
         return pic._id === currentId
       })} /> : null}
       <button onClick={() => props.history.goBack()} style={styles.button}>
@@ -61,6 +62,8 @@ const Item = props => {
       </button>
       <ItemImgDisplay id={id} items={props.location.state.menu} />
       <ItemDiscDisplay
+        quantity={quantity}
+        setQuantity={setQuantity}
         setCurrentSize={setCurrentSize}
         setCurrentId={setCurrentId}
         id={id}

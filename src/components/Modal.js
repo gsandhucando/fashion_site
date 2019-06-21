@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import axios from 'axios'
+// import axios from 'axios'
 
 let styles = {
   modal: {
@@ -22,11 +22,11 @@ let styles = {
     textAlign: 'center',
     top: '50%',
     left: '50%',
-    height: '600px',
+    height: '90vh',
     width: '600px',
     background: 'white',
     transform: 'translate(-50%, -50%)',
-    padding: '10px'
+    padding: '10px',
   },
   checkoutBtn: {
     height: '50px',
@@ -34,30 +34,44 @@ let styles = {
     background: 'black',
     color: 'white',
     fontSize: '20px',
+  },
+  modalPic: {
+    height: '250px',
+    width: '250px',
+  },
+  modalDiv: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent:'center',
   }
 }
 
 
 
 let Modal = (props) => {
-  console.log(props, 'modal')
-  let postItems = () => {
-    axios.post('http://localhost:3001/api/cart', { item_id: props.currentId,  size: props.size, color: props.pictures.color}).then(res => {
-      if (res.status !== 200) {
-        throw new Error('cant add item to cart')
-      }
-      console.log(res.data)
-    }).catch(err => console.log(err))
-  }
+  // console.log(props, 'modal')
+  // let postItems = () => {
+  //   axios.post('http://localhost:3001/api/cart', { item_id: props.currentId,  size: props.size, color: props.pictures.color}).then(res => {
+  //     if (res.status !== 200) {
+  //       throw new Error('cant add item to cart')
+  //     }
+  //     console.log(res.data)
+  //   }).catch(err => console.log(err))
+  // }
+  console.log(props, 'modal need img')
 
   return(
 <div onClick={props.exitCheckoutPreview} style={styles.modal}>
     <div style={styles.modalCard}>
       <h1>You've got great taste!</h1>
       <p>Added to your cart.</p>
+      <div style={styles.modalDiv}>
+      <img style={styles.modalPic} src={props.pictures.frontImg} />
+      </div>
       <p>{props.title}</p>
-      <p>${props.price.toFixed(2)}</p>
       <p>{props.size}</p>
+      <p>{props.quantity}</p>
+      <p>${props.price.toFixed(2)}</p>
       <div>
       <Link to="/checkout">
       <button style={styles.checkoutBtn}>Checkout</button>

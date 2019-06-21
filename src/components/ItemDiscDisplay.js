@@ -42,9 +42,7 @@ let styles = {
   }
 };
 
-const ItemDiscDisplay = ({ items, id, price, toggleClick, setCurrentId, setCurrentSize }) => {
-  let [quantity, setQuantity] = useState(1);
-
+const ItemDiscDisplay = ({ items, id, price, toggleClick, setCurrentId, setCurrentSize, setQuantity, quantity }, props) => {
 
   let filterColor = items.menu.filter(
     img => img._id === id
@@ -64,7 +62,7 @@ const ItemDiscDisplay = ({ items, id, price, toggleClick, setCurrentId, setCurre
         </p>
       </div>
       <div style={styles.btnContainers}>
-        {price > 200 ? null : <DropDownMenu setCurrentSize={setCurrentSize} />}
+        {price > 200 ? null : <DropDownMenu setCurrentSize={setCurrentSize} quantity={setQuantity} />}
         <DropDownColorMenu handleColor={setColor} setCurrentId={setCurrentId} menu={items.menu} />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <input

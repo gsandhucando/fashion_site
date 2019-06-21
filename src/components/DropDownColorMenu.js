@@ -61,7 +61,7 @@ const DropDownColorMenu = ({ handleColor, menu, setCurrentId }) => {
     setCurrentId(id)
     handleColor(color);
     setOpen(false);
-    console.log(color);
+    console.log(color, 'dropdownmenu');
   };
 
   return (

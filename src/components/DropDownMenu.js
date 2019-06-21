@@ -38,13 +38,6 @@ const DropDownMenu = ({setCurrentSize}) => {
   let [size, setSize] = useState("Size");
   let sizeRef = React.createRef();
 
-  // useEffect(() => {
-  //   document.addEventListener("click", handleClose);
-  //   return () => {
-  //     document.removeEventListener("click", handleClose);
-  //   };
-  // }, []);
-
   let handleOpen = event => {
     event.preventDefault();
     console.log("opening", !open);
@@ -62,6 +55,7 @@ const DropDownMenu = ({setCurrentSize}) => {
     setCurrentSize(event.target.innerHTML);
     setSize(event.target.innerHTML);
     setOpen(false);
+
   };
 
   return (

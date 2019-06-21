@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import axios from 'axios';
 
 let styles = {
   checkoutContainer: {
@@ -54,6 +55,20 @@ let styles = {
 }
 
 const Checkout = () => {
+  let emailRef = useRef(null)
+  let passwordRef = useRef(null)
+
+  let handleSubmit = (e)=> {
+    console.log('submitting')
+    e.preventDefault()
+    axios.post('http://localhost:3001/signup', {email: emailRef.current.value, password: passwordRef.current.value}).then(res => {
+      console.log(res.data, 'login')
+      if (res.status !== 200) {
+        throw new Error(res.data.message)
+      }
+    }).catch(err => console.log(err))
+  }
+
   return (
     <div style={styles.checkoutContainer}>
       <div style={styles.guestContainer}>
@@ -64,17 +79,17 @@ const Checkout = () => {
       <div style={styles.divider}></div>
       <div style={styles.loginContainer}>
         <p style={styles.title}>Sign In</p>
-        <form>
+        <form onSubmit={handleSubmit}>
           <p>Email</p>
-          <input style={styles.inputStyle} />
+          <input ref={emailRef} style={styles.inputStyle} />
           <p>Password</p>
-          <input style={styles.inputStyle} />
+          <input ref={passwordRef} style={styles.inputStyle} />
           <p>Forgot password?</p>
           <p>
             By signing in to your account, you agree to our{" "}
             <span>Privacy Policy</span> and <span>Terms & Conditions.</span>
           </p>
-          <button style={styles.signInBtn}>Sign in & Checkout</button>
+          <button type='submit' style={styles.signInBtn}>Sign in & Checkout</button>
         </form>
       </div>
     </div>

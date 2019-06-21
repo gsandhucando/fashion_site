@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import axios from 'axios'
 
 let styles = {
   modal: {
@@ -35,7 +37,19 @@ let styles = {
   }
 }
 
+
+
 let Modal = (props) => {
+  console.log(props, 'modal')
+  let postItems = () => {
+    axios.post('http://localhost:3001/api/cart', { item_id: props.currentId,  size: props.size, color: props.pictures.color}).then(res => {
+      if (res.status !== 200) {
+        throw new Error('cant add item to cart')
+      }
+      console.log(res.data)
+    }).catch(err => console.log(err))
+  }
+
   return(
 <div onClick={props.exitCheckoutPreview} style={styles.modal}>
     <div style={styles.modalCard}>
@@ -43,6 +57,7 @@ let Modal = (props) => {
       <p>Added to your cart.</p>
       <p>{props.title}</p>
       <p>${props.price.toFixed(2)}</p>
+      <p>{props.size}</p>
       <div>
       <Link to="/checkout">
       <button style={styles.checkoutBtn}>Checkout</button>

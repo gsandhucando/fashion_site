@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DropDownMenu from "./DropDownMenu";
 import DropDownColorMenu from "./DropDownColorMenu";
+import { PromiseProvider } from "mongoose";
 
 let styles = {
   itemDiscriptionContainer: {
@@ -41,7 +42,7 @@ let styles = {
   }
 };
 
-const ItemDiscDisplay = ({ items, id, price, toggleClick }) => {
+const ItemDiscDisplay = ({ items, id, price, toggleClick, setCurrentId, setCurrentSize }) => {
   let [quantity, setQuantity] = useState(1);
 
 
@@ -63,8 +64,8 @@ const ItemDiscDisplay = ({ items, id, price, toggleClick }) => {
         </p>
       </div>
       <div style={styles.btnContainers}>
-        {price > 200 ? null : <DropDownMenu />}
-        <DropDownColorMenu handleColor={setColor} menu={items.menu} />
+        {price > 200 ? null : <DropDownMenu setCurrentSize={setCurrentSize} />}
+        <DropDownColorMenu handleColor={setColor} setCurrentId={setCurrentId} menu={items.menu} />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <input
             onChange={e => setQuantity(e.target.value)}

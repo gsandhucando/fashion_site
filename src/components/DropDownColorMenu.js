@@ -39,7 +39,7 @@ let styles = {
   }
 };
 
-const DropDownColorMenu = ({ handleColor, menu }) => {
+const DropDownColorMenu = ({ handleColor, menu, setCurrentId }) => {
   let [open, setOpen] = useState(false);
   let [color, setColor] = useState("Color");
   let colorRef = useRef(null);
@@ -54,10 +54,11 @@ const DropDownColorMenu = ({ handleColor, menu }) => {
     setOpen(false);
   };
 
-  let onSelectSize = (event, color) => {
+  let onSelectSize = (event, color, id) => {
     event.preventDefault();
     console.log(event.target.childNodes);
     setColor(color);
+    setCurrentId(id)
     handleColor(color);
     setOpen(false);
     console.log(color);
@@ -76,7 +77,7 @@ const DropDownColorMenu = ({ handleColor, menu }) => {
               return (
                 <button
                   key={item.color}
-                  onClick={e => onSelectSize(e, item.color)}
+                  onClick={e => onSelectSize(e, item.color, item._id)}
                   style={styles.colorSelect}
                 >
                   <img src={item.button} />

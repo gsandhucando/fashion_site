@@ -33,7 +33,7 @@ let styles = {
   }
 };
 
-const DropDownMenu = () => {
+const DropDownMenu = ({setCurrentSize}) => {
   let [open, setOpen] = useState(false);
   let [size, setSize] = useState("Size");
   let sizeRef = React.createRef();
@@ -59,6 +59,7 @@ const DropDownMenu = () => {
 
   let onSelectSize = event => {
     event.preventDefault();
+    setCurrentSize(event.target.innerHTML);
     setSize(event.target.innerHTML);
     setOpen(false);
   };

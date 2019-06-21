@@ -11,10 +11,17 @@ import Item from './pages/Item';
 import Checkout from './pages/Checkout';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import cartReducer from './reducers/index';
+
+let store = createStore(cartReducer)
+
 
 const MainApp = () => {
   return (
     <div>
+      <Provider store={store}>
       <Router>
         <Route path='/' render={({location}) => {
           return <Nav nav={["men", "women", "cart", "contact"]} location={location}/>
@@ -31,6 +38,7 @@ const MainApp = () => {
           <Route path='/contact' component={Contact} />
         </Switch>
       </Router>
+      </Provider>
     </div>
   )
 }

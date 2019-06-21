@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Items from "../components/Items";
-import { womens_sunglasses } from '../data/data.json';
+import axios from 'axios';
 
 
-const WomensSunglasses = (props) => {
-  console.log(props)
+const WomensSunglasses = () => {
+  let [ womensSunglasses, setWomensSunglasses ] = useState([])
+
+  useEffect(()=> {
+    axios.get('http://localhost:3001/api/items?category=womens_sunglasses').then(res => {
+      if (res.status !== 200) {
+        throw new Error(res.data.message)
+      }
+      setWomensSunglasses(res.data)
+    }).catch((err) => console.log(err))
+  }, [])
+
+
   return (
     <div className="shirt-container">
-      {womens_sunglasses.map(sunglass => {
-        return <Items key={sunglass.title} {...sunglass} />;
+      {womensSunglasses.map(sunglass => {
+        return <Items key={sunglass._id} {...sunglass} />;
       })}
     </div>
   );

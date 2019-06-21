@@ -6,7 +6,7 @@ const ChevronDown = <FontAwesomeIcon icon={faSortDown} />;
 let styles = {
   colorContainer: {
     margin: "20px 0",
-    marginRight: 10,
+    marginRight: 10
   },
   colorBtn: {
     height: 50,
@@ -15,31 +15,31 @@ let styles = {
     display: "flex",
     justifyContent: "space-between",
     padding: 10,
-    border: '1px solid black',
-    background: 'white',
-    color: 'black'
+    border: "1px solid black",
+    background: "white",
+    color: "black"
   },
   colorChoise: {
     height: 50,
-    width: "100%",
+    width: "100%"
   },
   colorTextContent: {
     display: "flex",
     justifyContent: "center",
-    border: "1px solid grey",
+    border: "1px solid grey"
   },
   colorSelect: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    width: '100%',
-    background: 'yellow',
-    height: '50px',
-    fontSize: '20px',
-    padding: '0 15px'
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%",
+    background: "yellow",
+    height: "50px",
+    fontSize: "20px",
+    padding: "0 15px"
   }
 };
 
-const DropDownColorMenu = ({handleColor, menu}) => {
+const DropDownColorMenu = ({ handleColor, menu }) => {
   let [open, setOpen] = useState(false);
   let [color, setColor] = useState("Color");
   let colorRef = useRef(null);
@@ -56,11 +56,11 @@ const DropDownColorMenu = ({handleColor, menu}) => {
 
   let onSelectSize = (event, color) => {
     event.preventDefault();
-    console.log(event.target.childNodes)
+    console.log(event.target.childNodes);
     setColor(color);
-    handleColor(color)
+    handleColor(color);
     setOpen(false);
-    console.log(color)
+    console.log(color);
   };
 
   return (
@@ -72,14 +72,18 @@ const DropDownColorMenu = ({handleColor, menu}) => {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <h5 style={styles.colorTextContent}>Please select a color</h5>
           <button style={styles.colorChoise}>
-           {
-             menu.map(item => {
-               return <button key={item.color} onClick={(e)=> onSelectSize(e, item.color)} style={styles.colorSelect}>
-                 <img src={item.button}/>
-                 <span ref={colorRef}>{item.color}</span>
-               </button>
-             })
-           }
+            {menu.map(item => {
+              return (
+                <button
+                  key={item.color}
+                  onClick={e => onSelectSize(e, item.color)}
+                  style={styles.colorSelect}
+                >
+                  <img src={item.button} />
+                  <span ref={colorRef}>{item.color}</span>
+                </button>
+              );
+            })}
           </button>
         </div>
       ) : null}

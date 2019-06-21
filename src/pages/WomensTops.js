@@ -3,26 +3,27 @@ import Items from "../components/Items";
 import axios from 'axios';
 
 
-const WomensHoodies = () => {
-  let [ womensHoodies, setWomensHoodies ] = useState([])
+
+const WomensTops = () => {
+  let [tops, setTops] = useState([])
 
   useEffect(()=> {
-    axios.get('http://localhost:3001/api/items?category=womens_hoodies').then(res => {
+    axios.get('http://localhost:3001/api/items?category=tops').then(res => {
       if (res.status !== 200) {
         throw new Error(res.data.message)
       }
-      setWomensHoodies(res.data)
+      setTops(res.data)
     }).catch((err) => console.log(err))
   }, [])
 
 
   return (
     <div className="shirt-container">
-      {womensHoodies.map(hoodie => {
+      {tops.map(hoodie => {
         return <Items key={hoodie._id} {...hoodie} />;
       })}
     </div>
   );
 };
 
-export default WomensHoodies;
+export default WomensTops;

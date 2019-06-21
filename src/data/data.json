@@ -272,7 +272,7 @@
     ],
     "womens_hoodies": [
       {
-        "category": "womens hoodies",
+        "category": "womens_hoodies",
         "title": "Clarity Long Sleeve Hoodie",
         "price": 88.00,
         "menu": [
@@ -287,7 +287,7 @@
         ]
       },
       {
-        "category": "womens hoodies",
+        "category": "womens_hoodies",
         "title": "Zella Hoodie",
         "price": 110.00,
         "menu": [
@@ -312,7 +312,7 @@
     ],
     "womens_sunglasses": [
       {
-        "category": "womens sunglasses",
+        "category": "womens_sunglasses",
         "title": "Versace Mirrored Sunglasses",
         "price": 300.00,
         "menu": [

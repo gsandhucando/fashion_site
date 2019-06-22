@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import ItemImgDisplay from "../components/ItemImgDisplay";
 import ItemDiscDisplay from "../components/ItemDiscDisplay";
 import { mixedTypeAnnotation } from "@babel/types";
-import Modal from '../components/Modal';
+import Modal from "../components/Modal";
 const ChevronLeft = <FontAwesomeIcon icon={faChevronLeft} />;
 
 const styles = {
@@ -22,18 +22,16 @@ const styles = {
     background: "#333",
     color: "white",
     fontSize: "20px"
-  },
-
+  }
 };
 
 const Item = props => {
   let [toggleClick, setToggleClick] = useState(false);
-  let [ currentId, setCurrentId ] = useState(props.location.state.menu[0]._id)
-  let [ currentSize, setCurrentSize ] = useState('S')
-  let [ quantity, setQuantity] = useState(1)
+  let [currentId, setCurrentId] = useState(props.location.state.menu[0]._id);
+  let [currentSize, setCurrentSize] = useState("S");
+  let [quantity, setQuantity] = useState(1);
 
   console.log(props);
-
 
   let checkoutPreview = () => {
     setToggleClick(true);
@@ -42,21 +40,30 @@ const Item = props => {
 
   let exitCheckoutPreview = () => {
     setToggleClick(false);
-  }
+  };
 
-  let title = props.location.state.title
-  let price = props.location.state.price
-
+  let title = props.location.state.title;
+  let price = props.location.state.price;
 
   let id = props.match.params.id;
 
-  console.log(props, 'modal')
+  console.log(props, "modal");
 
   return (
     <div style={styles.item}>
-      {toggleClick ? <Modal quantity={quantity} size={currentSize} exitCheckoutPreview={exitCheckoutPreview} title={title} price={price} currentId={currentId} pictures={props.location.state.menu.find((pic)=> {
-        return pic._id === currentId
-      })} /> : null}
+      {toggleClick ? (
+        <Modal
+          quantity={quantity}
+          size={currentSize}
+          exitCheckoutPreview={exitCheckoutPreview}
+          title={title}
+          price={price}
+          currentId={currentId}
+          pictures={props.location.state.menu.find(pic => {
+            return pic._id === currentId;
+          })}
+        />
+      ) : null}
       <button onClick={() => props.history.goBack()} style={styles.button}>
         {ChevronLeft} back
       </button>

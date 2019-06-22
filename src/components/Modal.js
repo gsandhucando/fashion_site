@@ -18,11 +18,11 @@ let styles = {
     position: 'absolute',
     display: 'flex',
     flexDirection: 'column',
-    lineHeight: '3.5em',
+    lineHeight: '3.0em',
     textAlign: 'center',
     top: '50%',
     left: '50%',
-    height: '90vh',
+    height: '95vh',
     width: '600px',
     background: 'white',
     transform: 'translate(-50%, -50%)',
@@ -69,8 +69,9 @@ let Modal = (props) => {
       <img style={styles.modalPic} src={props.pictures.frontImg} />
       </div>
       <p>{props.title}</p>
-      <p>{props.size}</p>
-      <p>{props.quantity}</p>
+      <p>Size: {props.size}</p>
+      <p>Color: {props.pictures.color}</p>
+      <p>Quantity: {props.quantity}</p>
       <p>${props.price.toFixed(2)}</p>
       <div>
       <Link to="/checkout">

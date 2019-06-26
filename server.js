@@ -10,16 +10,18 @@ let passport = require("passport");
 let LocalStrategy = require("passport-local");
 let session = require("express-session");
 let User = require("./models/User");
+let path = require('path');
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
-  session({ secret: "2334", resave: true, saveUninitialized: true, cookie: {} })
+  session({ secret: "2334", resave: true, saveUninitialized: true, cookie: {maxAge: 1000 * 60 * 60 * 60 * 24} })
 );
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
+app.use(express.static(path.join(__dirname, 'build')))
 
 mongoose
   .connect("mongodb://localhost:27017/fashion_site", { useNewUrlParser: true })
@@ -69,7 +71,10 @@ app.post('/login',
   passport.authenticate('local'),
   function(req, res) {
     console.log('login in')
-    res.json({message: 'login was successful', user: {email: req.user.email, id: req.user._id, cart: req.user.cart}})
+    console.log(req.session, '*********session')
+    const user = {email: req.user.email, id: req.user._id, cart: req.user.cart}
+    res.cookie('user', user.id, {maxAge: 5000000})
+    res.json({message: 'login was successful', user })
   });
 
   app.post('/logout',
@@ -88,6 +93,13 @@ app.post('/login',
       .send({message: 'try signing up again'})
     })
   });
+
+  app.get('/*', (req, res)=> {
+    console.log(req.user)
+    console.log(req.session.passport)
+    res.sendfile(path.join(__dirname, 'build', 'index.html'))
+  })
+
 
 app.listen(PORT, () => {
   console.log(`server up on PORT: ${PORT}`);

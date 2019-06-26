@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import axios from 'axios';
 // import axios from 'axios'
 
 let styles = {
@@ -46,20 +47,8 @@ let styles = {
   }
 }
 
-
-
 let Modal = (props) => {
-  // console.log(props, 'modal')
-  // let postItems = () => {
-  //   axios.post('http://localhost:3001/api/cart', { item_id: props.currentId,  size: props.size, color: props.pictures.color}).then(res => {
-  //     if (res.status !== 200) {
-  //       throw new Error('cant add item to cart')
-  //     }
-  //     console.log(res.data)
-  //   }).catch(err => console.log(err))
-  // }
-  console.log(props, 'modal need img')
-
+  console.log(props)
   return(
 <div onClick={props.exitCheckoutPreview} style={styles.modal}>
     <div style={styles.modalCard}>
@@ -74,13 +63,39 @@ let Modal = (props) => {
       <p>Quantity: {props.quantity}</p>
       <p>${props.price.toFixed(2)}</p>
       <div>
+        { props.user ?
+          <button onClick={() => {props.addToCart({size: props.size, color: props.pictures.color, itemId: props.currentId, quantity: props.quantity, userId: props.user._id, name: props.title, picture: props.pictures.frontImg, price: props.price})}} style={styles.checkoutBtn}>Checkout</button> :
       <Link to="/checkout">
       <button style={styles.checkoutBtn}>Checkout</button>
       </Link>
+        }
       </div>
     </div>
   </div>
   )
 }
 
-export default Modal;
+let MapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (body)=> {
+      axios.post('http://localhost:3001/api/cart', body)
+      .then(response => {
+        console.log(response.data, 'response data******')
+        if (response.status !== 200) {
+          throw new Error(response.data.message)
+        }
+        dispatch({
+          type: 'ADD_ITEM', payload: {color: body.color, size: body.size, id: body.itemId, title: body.title, quantity: body.quantity, name: body.name, picture: body.picture, price: body.price }
+        })
+      })
+    }
+  }
+}
+
+let MapStateToProps = (state) => {
+  return{
+    user: state.user
+  }
+}
+
+export default connect(MapStateToProps, MapDispatchToProps)(Modal);

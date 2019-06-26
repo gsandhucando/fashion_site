@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 let styles = {
   title: {
@@ -21,7 +23,7 @@ let styles = {
 }
 
 let Cart = (props) => {
-  {console.log(props, 'cart')}
+  console.log(props, 'cart')
   return (
     <div>
       <h1 style={styles.title}>
@@ -35,11 +37,19 @@ let Cart = (props) => {
         <p>Subtotal</p>
         <p style={{borderBottom: '1px solid black'}}>Shipping</p>
         <h4>Total</h4>
+        <Link>
         <button style={styles.checkoutBtn}>Checkout</button>
+        </Link>
       </div>
       </div>
     </div>
   )
 }
 
-export default Cart;
+let MapStateToProps = (state) => {
+  return {
+    cart: state.user ? state.user.cart : []
+  }
+}
+
+export default connect(MapStateToProps)(Cart);

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import axios from "axios";
 import { userInfo } from "os";
 
@@ -56,18 +56,21 @@ let styles = {
   }
 };
 
-const Checkout = () => {
+const Checkout = (props) => {
   let emailRef = useRef(null);
   let passwordRef = useRef(null);
   let signUpEmailRef = useRef(null);
   let signUpPasswordRef = useRef(null);
+  let signUpConfirmPasswordRef = useRef(null);
+  let [ errorMessage, setErrorMessage ] = useState('');
+
 
   let handleSubmit = e => {
     console.log("submitting");
     e.preventDefault();
     axios
-      .post("http://localhost:3001/signup", {
-        email: emailRef.current.value,
+      .post("http://localhost:3001/login", {
+        username: emailRef.current.value,
         password: passwordRef.current.value
       })
       .then(res => {
@@ -75,19 +78,47 @@ const Checkout = () => {
         if (res.status !== 200) {
           throw new Error(res.data.message);
         }
+        props.history.goBack()
       })
-      .catch(err => console.log(err));
+      .catch(err => setErrorMessage(err.message));
+  };
+
+  let handleSignUpSubmit = e => {
+    console.log("submitting");
+    e.preventDefault();
+    if (signUpPasswordRef.current.value === signUpConfirmPasswordRef.current.value) {
+      axios
+        .post("http://localhost:3001/signup", {
+          email: signUpEmailRef.current.value,
+          password: signUpPasswordRef.current.value
+        })
+        .then(res => {
+          console.log(res.data, "signup");
+          if (res.status !== 200) {
+            throw new Error(res.data.message);
+          }
+          setErrorMessage('')
+        })
+        .catch(err => setErrorMessage(err.message));
+
+    } else {
+      setErrorMessage('password doesnt match try again')
+    }
   };
 
   return (
     <div style={styles.checkoutContainer}>
+
+      <p>{errorMessage}</p>
       <div style={styles.loginContainer}>
         <p style={styles.title}>Sign Up</p>
-        <form>
-        <p>Pleace enter your email</p>
+        <form onSubmit={handleSignUpSubmit}>
+        <p>Please enter your email</p>
         <input ref={signUpEmailRef} style={styles.inputStyle} />
         <p>Password</p>
           <input ref={signUpPasswordRef} style={styles.inputStyle} />
+        <p>Confirm Password</p>
+          <input ref={signUpConfirmPasswordRef} style={styles.inputStyle} />
         <button type='submit' style={styles.signInBtn}>Sign up & Checkout</button>
         </form>
       </div>

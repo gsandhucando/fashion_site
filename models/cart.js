@@ -1,12 +1,15 @@
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
-let cartSchema = new Schema({
-  email: {type: String, trim: true, required: true},
-  items: [new Schema({ item_id: {ref: "Item", type: Schema.Types.ObjectId},
-size: {type: String, trim: true}, color: {type: String, trim: true} })]
+let cartItemSchema = new Schema({
+  userId: {type: Schema.Types.ObjectId, ref: 'User'},
+  itemId: {type: Schema.Types.ObjectId, ref: 'Item'},
+  name: {type: String, trim: true},
+  picture: {type: String, trim: true},
+  size: {type: String, trim: true}, color: {type: String, trim: true}, quantity: {type: Number, default: 1 },
+  price: {type: Number}
 });
 
-let Cart = mongoose.model("Cart", cartSchema);
+let CartItem = mongoose.model("CartItem", cartItemSchema);
 
-module.exports = Cart;
+module.exports = CartItem;

@@ -42,7 +42,7 @@ let styles = {
   }
 };
 
-const ItemDiscDisplay = ({ items, id, price, toggleClick, setCurrentId, setCurrentSize, setQuantity, quantity }, props) => {
+const ItemDiscDisplay = ({ items, id, price, toggleClick, setCurrentId, setCurrentSize, setQuantity, quantity }) => {
 
   let filterColor = items.menu.filter(
     img => img._id === id

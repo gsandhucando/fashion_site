@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Style from "./css/Nav.module.css";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 let styles = {
   itemDisplay: {
@@ -17,7 +18,7 @@ let styles = {
   }
 };
 
-const Nav = ({ nav }, props) => {
+const Nav = ({ nav, cartCount }) => {
   let [mobile, setMobile] = useState(false);
 
 
@@ -65,7 +66,7 @@ const Nav = ({ nav }, props) => {
                 <Link to={`/${list}`}>{list}</Link>
 
                 {list === "cart" ? (
-                  <div style={styles.itemDisplay}>1</div>
+                  <div style={styles.itemDisplay}>{cartCount}</div>
                 ) : null}
               </li>
             )
@@ -76,4 +77,10 @@ const Nav = ({ nav }, props) => {
   );
 };
 
-export default Nav;
+let MapStateToProps = (state) => {
+  return {
+    cartCount: state.user ? state.user.cart.length : 0
+  }
+}
+
+export default connect(MapStateToProps)(Nav);

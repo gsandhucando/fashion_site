@@ -6,7 +6,9 @@ let cartItemSchema = new Schema({
   itemId: {type: Schema.Types.ObjectId, ref: 'Item'},
   name: {type: String, trim: true},
   picture: {type: String, trim: true},
-  size: {type: String, trim: true}, color: {type: String, trim: true}, quantity: {type: Number, default: 1 },
+  size: {type: String, trim: true},
+  color: {type: String, trim: true},
+  quantity: {type: Number, default: 1 },
   price: {type: Number}
 });
 

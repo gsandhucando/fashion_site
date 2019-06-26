@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { relative } from "path";
 
 const styles = {
   itemContainer: {

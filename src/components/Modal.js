@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import axios from 'axios';
-// import axios from 'axios'
 
 let styles = {
   modal: {
@@ -11,9 +10,6 @@ let styles = {
     top: "0%",
     height: "100vh",
     width: "100vw",
-    // display: 'flex',
-    // flexDirection: 'column',
-    // justifyContent: 'center',
   },
   modalCard: {
     position: 'absolute',
@@ -55,7 +51,7 @@ let Modal = (props) => {
       <h1>You've got great taste!</h1>
       <p>Added to your cart.</p>
       <div style={styles.modalDiv}>
-      <img style={styles.modalPic} src={props.pictures.frontImg} />
+      <img style={styles.modalPic} src={props.pictures.frontImg} alt="#"/>
       </div>
       <p>{props.title}</p>
       <p>Size: {props.size}</p>

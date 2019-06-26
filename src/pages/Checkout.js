@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import axios from "axios";
-import { userInfo } from "os";
 
 let styles = {
   checkoutContainer: {

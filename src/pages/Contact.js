@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { stringLiteral } from '@babel/types';
 
 let styles = {
   contactContainer: {

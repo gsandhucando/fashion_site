@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import ItemImgDisplay from "../components/ItemImgDisplay";
 import ItemDiscDisplay from "../components/ItemDiscDisplay";
-import { mixedTypeAnnotation } from "@babel/types";
 import Modal from "../components/Modal";
 const ChevronLeft = <FontAwesomeIcon icon={faChevronLeft} />;
 

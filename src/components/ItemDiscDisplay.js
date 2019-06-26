@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import DropDownMenu from "./DropDownMenu";
 import DropDownColorMenu from "./DropDownColorMenu";
-import { PromiseProvider } from "mongoose";
 
 let styles = {
   itemDiscriptionContainer: {

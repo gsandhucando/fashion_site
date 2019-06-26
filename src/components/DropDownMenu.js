@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 const ChevronDown = <FontAwesomeIcon icon={faSortDown} />;
@@ -36,7 +36,6 @@ let styles = {
 const DropDownMenu = ({setCurrentSize}) => {
   let [open, setOpen] = useState(false);
   let [size, setSize] = useState("Size");
-  let sizeRef = React.createRef();
 
   let handleOpen = event => {
     event.preventDefault();

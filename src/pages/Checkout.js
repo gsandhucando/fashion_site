@@ -25,8 +25,7 @@ let styles = {
     width: "100%",
     paddingTop: "100px",
     marginLeft: "50px",
-    lineHeight: "2.2em",
-
+    lineHeight: "2.2em"
   },
   signInBtn: {
     border: "none",
@@ -35,7 +34,7 @@ let styles = {
     background: "black",
     color: "white",
     fontSize: "20px",
-    marginTop: '10px'
+    marginTop: "10px"
   },
   divider: {
     position: "absolute",
@@ -55,14 +54,13 @@ let styles = {
   }
 };
 
-const Checkout = (props) => {
+const Checkout = props => {
   let emailRef = useRef(null);
   let passwordRef = useRef(null);
   let signUpEmailRef = useRef(null);
   let signUpPasswordRef = useRef(null);
   let signUpConfirmPasswordRef = useRef(null);
-  let [ errorMessage, setErrorMessage ] = useState('');
-
+  let [errorMessage, setErrorMessage] = useState("");
 
   let handleSubmit = e => {
     console.log("submitting");
@@ -77,7 +75,7 @@ const Checkout = (props) => {
         if (res.status !== 200) {
           throw new Error(res.data.message);
         }
-        props.history.goBack()
+        props.history.goBack();
       })
       .catch(err => setErrorMessage(err.message));
   };
@@ -85,7 +83,9 @@ const Checkout = (props) => {
   let handleSignUpSubmit = e => {
     console.log("submitting");
     e.preventDefault();
-    if (signUpPasswordRef.current.value === signUpConfirmPasswordRef.current.value) {
+    if (
+      signUpPasswordRef.current.value === signUpConfirmPasswordRef.current.value
+    ) {
       axios
         .post("http://localhost:3001/signup", {
           email: signUpEmailRef.current.value,
@@ -96,29 +96,29 @@ const Checkout = (props) => {
           if (res.status !== 200) {
             throw new Error(res.data.message);
           }
-          setErrorMessage('')
+          setErrorMessage("");
         })
         .catch(err => setErrorMessage(err.message));
-
     } else {
-      setErrorMessage('password doesnt match try again')
+      setErrorMessage("password doesnt match try again");
     }
   };
 
   return (
     <div style={styles.checkoutContainer}>
-
       <p>{errorMessage}</p>
       <div style={styles.loginContainer}>
         <p style={styles.title}>Sign Up</p>
         <form onSubmit={handleSignUpSubmit}>
-        <p>Please enter your email</p>
-        <input ref={signUpEmailRef} style={styles.inputStyle} />
-        <p>Password</p>
+          <p>Please enter your email</p>
+          <input ref={signUpEmailRef} style={styles.inputStyle} />
+          <p>Password</p>
           <input ref={signUpPasswordRef} style={styles.inputStyle} />
-        <p>Confirm Password</p>
+          <p>Confirm Password</p>
           <input ref={signUpConfirmPasswordRef} style={styles.inputStyle} />
-        <button type='submit' style={styles.signInBtn}>Sign up & Checkout</button>
+          <button type="submit" style={styles.signInBtn}>
+            Sign up & Checkout
+          </button>
         </form>
       </div>
       <div style={styles.divider} />

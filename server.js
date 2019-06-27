@@ -10,18 +10,24 @@ let passport = require("passport");
 let LocalStrategy = require("passport-local");
 let session = require("express-session");
 let User = require("./models/User");
-let path = require('path');
+let path = require("path");
+let bcrypt = require("bcryptjs");
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
-  session({ secret: "2334", resave: true, saveUninitialized: true, cookie: {maxAge: 1000 * 60 * 60 * 60 * 24} })
+  session({
+    secret: "2334",
+    resave: true,
+    saveUninitialized: true,
+    cookie: { maxAge: 1000 * 60 * 60 * 60 * 24 }
+  })
 );
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
-app.use(express.static(path.join(__dirname, 'build')))
+app.use(express.static(path.join(__dirname, "build")));
 
 mongoose
   .connect("mongodb://localhost:27017/fashion_site", { useNewUrlParser: true })
@@ -52,54 +58,61 @@ passport.deserializeUser((id, done) => {
   });
 });
 
-passport.use(new LocalStrategy((email, password, done)=> {
-  console.log(email, password, 'passport')
-  User.findOne({email})
-  .then(user => {
-    if (!user) {
-      return done(null, false, {message: 'wrong email'})
-    }
-    if (user.password === password) {
-      return done(null, user)
-    } else {
-      return done(null, false, {message: 'incorecct password'})
-    }
-  }).catch(err => done(err))
-}))
-
-app.post('/login',
-  passport.authenticate('local'),
-  function(req, res) {
-    console.log('login in')
-    console.log(req.session, '*********session')
-    const user = {email: req.user.email, id: req.user._id, cart: req.user.cart}
-    res.cookie('user', user.id, {maxAge: 5000000})
-    res.json({message: 'login was successful', user })
-  });
-
-  app.post('/logout',
-  function(req, res) {
-    req.logout();
-    res.json({message: 'logout was successful'})
-  });
-
-  app.post('/signup',
-  function(req, res) {
-    User.create(req.body)
-    .then(user => {
-      res.json({message: 'signup was successful'})
-    }).catch(err => {
-      res.status(422)
-      .send({message: 'try signing up again'})
-    })
-  });
-
-  app.get('/*', (req, res)=> {
-    console.log(req.user)
-    console.log(req.session.passport)
-    res.sendfile(path.join(__dirname, 'build', 'index.html'))
+passport.use(
+  new LocalStrategy((email, password, done) => {
+    console.log(email, password, "passport");
+    User.findOne({ email })
+      .then(user => {
+        if (!user) {
+          return done(null, false, { message: "wrong email" });
+        }
+        bcrypt.compare(password, user.password).then(isPassword => {
+          if (isPassword) {
+            return done(null, user)
+          } else {
+            return done(null, false, { message: "wrong password" });
+          }
+        })
+      })
+      .catch(err => done(err));
   })
+);
 
+app.post("/login", passport.authenticate("local"), function(req, res) {
+  console.log("login in");
+  console.log(req.session, "*********session");
+  const user = { email: req.user.email, id: req.user._id, cart: req.user.cart };
+  res.cookie("user", user.id, { maxAge: 5000000 });
+  res.json({ message: "login was successful", user });
+});
+
+app.post("/logout", function(req, res) {
+  req.logout();
+  res.json({ message: "logout was successful" });
+});
+
+app.post("/signup", function(req, res) {
+  bcrypt
+    .hash(req.body.password, 10)
+    .then(hashedPassword => {
+      return User.create({
+        email: req.body.email,
+        password: hashedPassword
+      });
+    })
+    .then(user => {
+      res.json({ message: "signup was successful" });
+    })
+    .catch(err => {
+      res.status(422).send({ message: "try signing up again" });
+    });
+});
+
+app.get("/*", (req, res) => {
+  console.log(req.user);
+  console.log(req.session.passport);
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`server up on PORT: ${PORT}`);

@@ -14,7 +14,22 @@ router.route('/cart').get((req, res) => {
   .then(user => {
     res.send(user)
   }).catch(err => console.log(err))
+}).delete((req, res)=> {
+  userModel.findByIdAndUpdate(req.query.userid, {$pull: {cart: req.query.itemid}})
+  .then(user => {
+    return cartItemModel.findByIdAndRemove(req.query.itemid)
+  })
+  .then(item => {
+    res.send({message: item._id + ' been removed'})
+
+  })
+  .catch(err => {
+    res.status(422)
+    .send({message: 'couldnt remove item'})
+  })
 })
+
+
 
 module.exports = router;
 

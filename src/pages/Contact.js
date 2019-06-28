@@ -68,7 +68,7 @@ const Contact = () => {
       </p>
       </div>
       {message ? <div style={styles.messageDiv}> <h3 style={styles.messageSent}>Message sent thank you.</h3> </div> :
-      <form style={styles.formContainer}>
+      <form className='contactForm' style={styles.formContainer}>
         <p className='inputHeading'>Name<span style={{color: 'red'}}>*</span></p>
         <input className='contactInput' required='required' type='text' placeholder='Please enter name' />
         <p>E-mail<span style={{color: 'red'}}>*</span></p>

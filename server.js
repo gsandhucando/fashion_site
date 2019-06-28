@@ -14,8 +14,11 @@ let path = require("path");
 let bcrypt = require("bcryptjs");
 
 app.use(cors());
+//converts to readable js object
 app.use(express.json());
+//takes objects from forum submit and converts when its in html
 app.use(express.urlencoded({ extended: true }));
+//session is for each user to keep track of
 app.use(
   session({
     secret: "2334",
@@ -27,10 +30,14 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
+//serving images to have access
 app.use(express.static(path.join(__dirname, "build")));
 
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/fashion_site", { useNewUrlParser: true })
+  .connect(
+    process.env.MONGODB_URI || "mongodb://localhost:27017/fashion_site",
+    { useNewUrlParser: true }
+  )
   .then(() => {
     console.log("connected");
     let allItems = [].concat(
@@ -67,13 +74,12 @@ passport.use(
           return done(null, false, { message: "wrong email" });
         }
         bcrypt.compare(password, user.password).then(isPassword => {
-          console.log(isPassword, '!!!!!!@@@passswords')
+          console.log(isPassword, "!!!!!!@@@passswords");
           if (isPassword) {
-            return done(null, user, user.password)
+            return done(null, user, user.password);
           }
-            return done(null, false, { message: "wrong password" });
-
-        })
+          return done(null, false, { message: "wrong password" });
+        });
       })
       .catch(err => done(err));
   })
@@ -109,6 +115,7 @@ app.post("/signup", function(req, res) {
     });
 });
 
+//sending react information
 app.get("/*", (req, res) => {
   console.log(req.user);
   console.log(req.session.passport);

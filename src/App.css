@@ -123,6 +123,11 @@
   color: white;
 }
 
+.navMobileMenuLI a {
+  width: 100vw;
+  color: red;
+}
+
 .navMobileMenuUL {
   background: white;
   width: 100%;

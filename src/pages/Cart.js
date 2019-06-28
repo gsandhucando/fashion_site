@@ -93,7 +93,7 @@ let Cart = (props) => {
 
 
   return (
-    <div>
+    <div className='cartContainer'>
       <h1 style={styles.title}>
         Shopping Cart
       </h1>
@@ -121,7 +121,7 @@ let Cart = (props) => {
         }
     </div>
     <div>
-      <p>
+      <p style={{paddingLeft: '10px'}}>
         Have a question? Call <span style={{color: 'blue'}}>1-800-SON-NEWW</span>
       </p>
       <div className='totalDiv'>

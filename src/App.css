@@ -126,10 +126,19 @@
   .signininfo {
     margin: 0;
   }
+  .cartContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-
+  .cartContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .navMobileMenuLI {
   border-bottom: 1px solid #333;

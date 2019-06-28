@@ -93,11 +93,11 @@ let Cart = (props) => {
 
 
   return (
-    <div className='cartContainer'>
+    <div >
       <h1 style={styles.title}>
         Shopping Cart
       </h1>
-      <div style={styles.itemContent}>
+      <div className='cartContainer' style={styles.itemContent}>
         {
           cart.map((item, i)=> {
             return <div key={item._id}>

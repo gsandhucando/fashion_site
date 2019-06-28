@@ -7,7 +7,7 @@ const MensItems = () => {
   let [ mensItems, setMensItems ] = useState([])
 
   useEffect(()=> {
-    axios.get('http://localhost:3001/api/items?category=shirts,hoodies,sunglasses').then(res => {
+    axios.get('/api/items?category=shirts,hoodies,sunglasses').then(res => {
       if (res.status !== 200) {
         throw new Error(res.data.message)
       }

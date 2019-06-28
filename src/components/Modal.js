@@ -74,7 +74,7 @@ let Modal = (props) => {
 let MapDispatchToProps = (dispatch) => {
   return {
     addToCart: (body)=> {
-      axios.post('http://localhost:3001/api/cart', body)
+      axios.post('/api/cart', body)
       .then(response => {
         console.log(response.data, 'response data******')
         if (response.status !== 200) {

@@ -100,7 +100,13 @@
 @media only screen and (max-width: 400px) {
 
 }
-
+.navMobileMenuLI {
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  /* align-content: center; */
+}
 .navMobileMenuContainer {
   position: absolute;
   top: 100%;
@@ -108,17 +114,24 @@
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  background: red;
   z-index: 98;
   width: 100vw;
-  /* opacity: 1; */
+}
+
+.navMobileMenuLI a:hover {
+  background: #333;
+  color: white;
 }
 
 .navMobileMenuUL {
-  background: red;
+  background: white;
   width: 100%;
   height: 200px;
   z-index: 98;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
 }
 
 

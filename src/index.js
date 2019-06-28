@@ -22,7 +22,7 @@ let getUser = (dispatch) => {
   if (document.cookie.length > 0) {
     let id = document.cookie.slice(12, -3);
     axios
-      .post("http://localhost:3001/api/user", { id })
+      .post("/api/user", { id })
       .then(response => {
         if (response.status !== 200) {
           throw new Error(response.data.message);

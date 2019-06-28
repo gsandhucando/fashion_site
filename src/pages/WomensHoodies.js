@@ -7,7 +7,7 @@ const WomensHoodies = () => {
   let [ womensHoodies, setWomensHoodies ] = useState([])
 
   useEffect(()=> {
-    axios.get('http://localhost:3001/api/items?category=womens_hoodies').then(res => {
+    axios.get('/api/items?category=womens_hoodies').then(res => {
       if (res.status !== 200) {
         throw new Error(res.data.message)
       }

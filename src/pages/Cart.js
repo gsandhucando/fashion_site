@@ -57,7 +57,7 @@ let Cart = (props) => {
         return item
       }
     })
-    axios.delete(`http://localhost:3001/api/cart?itemid=${id}&userid=${props.userid}`)
+    axios.delete(`/api/cart?itemid=${id}&userid=${props.userid}`)
     .then(response => {
       if (response.status !== 200) {
         throw new Error(response.data.message)

@@ -25,7 +25,7 @@ const HomePage = () => {
             marginBottom: 150
           }}
         >
-          <h2 style={{ fontWeight: "64" }}>RAW Clothing</h2>
+          <h2 style={{ fontWeight: "64" }}>SONU. Clothing</h2>
           <p style={{ fontSize: "34" }}>Revolutionary Artistic Wear</p>
         </div>
         <div className='estLine' style={{ display: "flex", flexDirection: "row" }}>

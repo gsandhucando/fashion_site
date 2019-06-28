@@ -66,7 +66,7 @@ const Checkout = props => {
     console.log("submitting");
     e.preventDefault();
     axios
-      .post("http://localhost:3001/login", {
+      .post("/login", {
         username: emailRef.current.value,
         password: passwordRef.current.value
       })
@@ -84,10 +84,10 @@ const Checkout = props => {
     console.log("submitting");
     e.preventDefault();
     if (
-      signUpPasswordRef.current.value === signUpConfirmPasswordRef.current.value
+      signUpPasswordRef.current.value === signUpConfirmPasswordRef.current.value && signUpPasswordRef.current.value.length >= 6
     ) {
       axios
-        .post("http://localhost:3001/signup", {
+        .post("/signup", {
           email: signUpEmailRef.current.value,
           password: signUpPasswordRef.current.value
         })

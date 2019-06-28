@@ -97,11 +97,11 @@ let Cart = (props) => {
       <h1 style={styles.title}>
         Shopping Cart
       </h1>
-      <div style={styles.itemContent}>
+      <div className='cartContainer' style={styles.itemContent}>
         {
           cart.map((item, i)=> {
-            return <div className='cartContainer' key={item._id}>
-            <div style={styles.itemContainer}>
+            return <div key={item._id}>
+            <div className='itemContainer' style={styles.itemContainer}>
             <img style={styles.imgSize} src={item.picture} alt="" />
             <div style={styles.titleSizeColorContainer}>
             <h3>{item.name}</h3>

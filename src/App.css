@@ -93,8 +93,33 @@
     margin: 0;
     width: 300px;
   }
+  .divdivider {
+    display: none;
+  }
+  .checkoutContainer {
+    display: flex;
+    flex-direction: column;
 
+  }
+  .signupform {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
 
+  .signupform input {
+    border: 1px solid #333;
+  }
+  .signinform {
+    display: flex;
+    flex-direction: column;
+  }
+  .signinform input {
+    border: 1px solid #333;
+  }
+  .signininfo {
+    margin: 0;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -129,7 +154,7 @@
 
 .cartNumber {
   position: absolute;
-  right: 40%;
+  right: 38%;
   background: red;
   border-radius: 50%;
   height: 25px;

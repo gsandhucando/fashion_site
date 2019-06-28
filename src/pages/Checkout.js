@@ -50,6 +50,8 @@ let styles = {
     width: "60%"
   },
   title: {
+    display: 'flex',
+    textAlign: 'center',
     fontSize: "38px"
   }
 };
@@ -84,7 +86,9 @@ const Checkout = props => {
     console.log("submitting");
     e.preventDefault();
     if (
-      signUpPasswordRef.current.value === signUpConfirmPasswordRef.current.value && signUpPasswordRef.current.value.length >= 6
+      signUpPasswordRef.current.value ===
+        signUpConfirmPasswordRef.current.value &&
+      signUpPasswordRef.current.value.length >= 6
     ) {
       axios
         .post("/signup", {
@@ -105,11 +109,11 @@ const Checkout = props => {
   };
 
   return (
-    <div style={styles.checkoutContainer}>
+    <div className="checkoutContainer" style={styles.checkoutContainer}>
       <p>{errorMessage}</p>
       <div style={styles.loginContainer}>
         <p style={styles.title}>Sign Up</p>
-        <form onSubmit={handleSignUpSubmit}>
+        <form className="signupform" onSubmit={handleSignUpSubmit}>
           <p>Please enter your email</p>
           <input ref={signUpEmailRef} style={styles.inputStyle} />
           <p>Password</p>
@@ -121,16 +125,16 @@ const Checkout = props => {
           </button>
         </form>
       </div>
-      <div style={styles.divider} />
+      <div className="divdivider" style={styles.divider} />
       <div style={styles.loginContainer}>
         <p style={styles.title}>Sign In</p>
-        <form onSubmit={handleSubmit}>
+        <form className="signinform" onSubmit={handleSubmit}>
           <p>Email</p>
           <input ref={emailRef} style={styles.inputStyle} />
           <p>Password</p>
           <input ref={passwordRef} style={styles.inputStyle} />
           <p>Forgot password?</p>
-          <p>
+          <p className='signininfo'>
             By signing in to your account, you agree to our{" "}
             <span>Privacy Policy</span> and <span>Terms & Conditions.</span>
           </p>

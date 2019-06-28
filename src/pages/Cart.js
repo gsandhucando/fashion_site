@@ -38,9 +38,16 @@ let styles = {
   },
   quantityPriceContainer: {
     display: 'flex',
-    background: 'aqua',
     width: 300,
     justifyContent: 'space-around'
+  },
+  removeBtn: {
+    border: 'none',
+    height: '50px',
+    width: '90px',
+    background: 'black',
+    color: 'white',
+    fontSize: '20px'
   }
 }
 
@@ -106,7 +113,7 @@ let Cart = (props) => {
               <p>Price: {item.price.toFixed(2)}</p>
             </div>
             <div>
-              <button onClick={()=>removeItemBtn(item._id)}>Remove Item</button>
+              <button style={styles.removeBtn} onClick={()=>removeItemBtn(item._id)}>Remove Item</button>
             </div>
             </div>
             </div>
@@ -117,10 +124,8 @@ let Cart = (props) => {
       <p>
         Have a question? Call <span style={{color: 'blue'}}>1-800-SON-NEWW</span>
       </p>
-      <div>
-        <p>Subtotal</p>
-        <p style={{borderBottom: '1px solid black'}}>Shipping</p>
-        <h4>Total</h4>
+      <div className='totalDiv'>
+        <h4 style={{borderBottom: '1px solid black'}}>Total</h4>
         <h4>${total.toFixed(2)}</h4>
         <Link>
         <button style={styles.checkoutBtn}>Checkout</button>

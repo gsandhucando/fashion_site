@@ -10,7 +10,7 @@ const NavMobileMenu = ({ nav, cartCount }) => {
             <li className='navMobileMenuLI' key={list}>
               <Link to={`/${list}`}>{list}</Link>
 
-              {list === "cart" ? <div>{cartCount}</div> : null}
+              {list === "cart" ? <div className='cartNumber'>{cartCount}</div> : null}
             </li>
           );
         })}

@@ -125,7 +125,18 @@
 
 .navMobileMenuLI a {
   width: 100vw;
-  color: red;
+}
+
+.cartNumber {
+  position: absolute;
+  right: 40%;
+  background: red;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
 
 .navMobileMenuUL {

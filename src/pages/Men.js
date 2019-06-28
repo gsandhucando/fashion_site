@@ -40,7 +40,7 @@ const Men = () => {
           </ul>
         ) : null}
       </div>
-      <div style={{display: 'inline-block', marginRight: '25vw', width: '100%', minWidth: '600px'}}>
+      <div className='itemsContinerDiv' style={{display: 'flex', marginRight: '25vw', width: '100%', minWidth: '600px'}}>
       <Route exact path='/men/' component={MensItems}/>
       <Route path='/men/t-shirts' component={Shirts}/>
 

@@ -67,11 +67,12 @@ passport.use(
           return done(null, false, { message: "wrong email" });
         }
         bcrypt.compare(password, user.password).then(isPassword => {
+          console.log(isPassword, '!!!!!!@@@passswords')
           if (isPassword) {
-            return done(null, user)
-          } else {
-            return done(null, false, { message: "wrong password" });
+            return done(null, user, user.password)
           }
+            return done(null, false, { message: "wrong password" });
+
         })
       })
       .catch(err => done(err));

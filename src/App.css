@@ -41,6 +41,29 @@
   padding-right: 20px;
 }
 
+.divdivider {
+  display: none;
+}
+
+.signinform {
+  display: flex;
+  flex-direction: column;
+  line-height: 60px;
+}
+.signinform input {
+  border: 1px solid #333;
+}
+
+.signupform {
+  display: flex;
+  flex-direction: column;
+  line-height: 60px;
+}
+
+.signupform input {
+  border: 1px solid #333;
+}
+
 .cartContainer {
   display: flex;
   flex-direction: column;

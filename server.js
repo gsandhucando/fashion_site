@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 let itemModel = require("./models/item");
 let data = require("./src/data/data.json");
 let routes = require("./routes");
@@ -30,7 +30,7 @@ app.use(routes);
 app.use(express.static(path.join(__dirname, "build")));
 
 mongoose
-  .connect("mongodb://localhost:27017/fashion_site", { useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/fashion_site", { useNewUrlParser: true })
   .then(() => {
     console.log("connected");
     let allItems = [].concat(

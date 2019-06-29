@@ -111,7 +111,7 @@ const Checkout = props => {
   return (
     <div className="checkoutContainer" style={styles.checkoutContainer}>
       <p>{errorMessage}</p>
-      <div style={styles.loginContainer}>
+      <div className='loginContainer' style={styles.loginContainer}>
         <p style={styles.title}>Sign Up</p>
         <form className="signupform" onSubmit={handleSignUpSubmit}>
           <p>Please enter your email</p>
@@ -126,7 +126,7 @@ const Checkout = props => {
         </form>
       </div>
       <div className="divdivider" style={styles.divider} />
-      <div style={styles.loginContainer}>
+      <div className='loginContainer' style={styles.loginContainer}>
         <p style={styles.title}>Sign In</p>
         <form className="signinform" onSubmit={handleSubmit}>
           <p>Email</p>

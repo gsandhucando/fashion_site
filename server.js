@@ -48,7 +48,7 @@ mongoose
       data.womens_hoodies,
       data.womens_sunglasses
     );
-    itemModel.remove({}).then(() => {
+    itemModel.deleteMany({}).then(() => {
       return itemModel.insertMany(allItems).then(data => {
         // console.log(data);
       });

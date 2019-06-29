@@ -185,7 +185,10 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) */
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
   .cartContainer {
     display: flex;
     flex-direction: column;

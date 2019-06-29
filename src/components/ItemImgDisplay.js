@@ -44,7 +44,7 @@ const ItemImgDisplay = ({ items, id }) => {
   });
 
   return (
-    <div className='itemContainerDiv' style={styles.itemContainer}>
+    <div className='itemContainerDiv'>
       <div style={{ height: "540px", width: 150, }}>
         <ul>
           {front}

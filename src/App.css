@@ -226,6 +226,9 @@
 
 @media only screen and (max-width:400px),
 only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .itemSelect {
+    display: flex;
+  }
   .itemContainerDiv {
     display: flex;
     height: 100vh;

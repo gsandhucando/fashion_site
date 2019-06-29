@@ -49,7 +49,7 @@ const ItemDiscDisplay = ({ items, id, price, toggleClick, setCurrentId, setCurre
   let [color, setColor] = useState(filterColor[0].color);
 
   return (
-    <div style={styles.itemDiscriptionContainer}>
+    <div className='itemDropdown'>
       <div style={styles.textContainer}>
         <h1>{items.title}</h1>
         <p style={{ fontSize: "30px" }}>${items.price.toFixed(2)}</p>

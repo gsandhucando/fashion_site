@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, "build")));
 mongoose
   .connect(
     process.env.MONGODB_URI || "mongodb://localhost:27017/fashion_site",
-    { useNewUrlParser: true }
+    { useNewUrlParser: true, useCreateIndex: true }
   )
   .then(() => {
     console.log("connected");

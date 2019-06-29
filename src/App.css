@@ -221,17 +221,13 @@
     line-height: 1.0em;
     /* margin-bottom: 0px; */
   }
-  .itemSelect {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-  }
+
 }
 
 @media only screen and (max-width:400px),
 only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  .itemSelect {
+  .itemContainerDiv {
     display: flex;
-    flex-direction: reverse-column;
     height: 100vh;
   }
   .checkoutContainer {

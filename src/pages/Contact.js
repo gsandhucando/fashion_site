@@ -68,14 +68,14 @@ const Contact = () => {
       </p>
       </div>
       {message ? <div style={styles.messageDiv}> <h3 style={styles.messageSent}>Message sent thank you.</h3> </div> :
-      <form className='contactForm' style={styles.formContainer}>
+      <form className='contactForm'>
         <p className='inputHeading'>Name<span style={{color: 'red'}}>*</span></p>
         <input className='contactInput' required='required' type='text' placeholder='Please enter name' />
         <p>E-mail<span style={{color: 'red'}}>*</span></p>
         <input className='contactInput' required='required' type='email' placeholder='Please enter email' />
         <p>Message<span style={{color: 'red'}}>*</span></p>
         <textarea type='text' className='contactTextarea' placeholder='Please enter message' />
-        <button className='contactFormBtn' onClick={messageSent} style={styles.submitBtn}>Send Message</button>
+        <button className='contactFormBtn' onClick={messageSent}>Send Message</button>
       </form>
       }
     </div>

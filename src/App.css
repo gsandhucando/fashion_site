@@ -313,6 +313,7 @@ only screen and (-webkit-min-device-pixel-ratio: 1.5) {
 }
 
 @media only screen and (max-width: 400px) {
+
   .cartContainer {
     display: flex;
     flex-direction: column;
@@ -392,12 +393,14 @@ only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   width: 40%;
   height: 25px;
   font-size: 1.0em;
+  border: 1px solid black;
 }
 
 .contactTextarea{
   width: 40%;
-  height: 300px;
-  font-size: 1.0em;
+  height: 200px;
+  /* font-size: 1.0em; */
+  border: 1px solid black;
 }
 
 .inputHeading {

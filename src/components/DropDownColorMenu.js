@@ -71,7 +71,7 @@ const DropDownColorMenu = ({ handleColor, menu, setCurrentId }) => {
       {open ? (
         <div style={{ display: "flex", flexDirection: "column", height: '160px' }}>
           <h5 style={styles.colorTextContent}>Please select a color</h5>
-          <button style={styles.colorChoise}>
+          <button className="colorChoise">
             {menu.map(item => {
               return (
                 <button

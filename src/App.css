@@ -9,6 +9,11 @@
   text-align: center;
 }
 
+.colorChoise {
+  height: 165px;
+  width: 100%;
+}
+
 .homePageCenterDiv {
   display: flex;
   flex-direction: column;
@@ -232,7 +237,12 @@
 
 @media only screen and (max-width:400px),
 only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-
+  .homepagetext {
+    font-size: 20px;
+  }
+  .estText {
+    font-size: 20px;
+  }
   .itemSelect {
     display: flex;
   }

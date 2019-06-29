@@ -45,14 +45,15 @@ let styles = {
     left: "50%",
     transform: "translate(-50%, -50%)"
   },
-  inputStyle: {
-    height: "30px",
-    width: "60%"
-  },
+  // inputStyle: {
+  //   height: "30px",
+  //   width: "40%"
+  // },
   title: {
     display: "flex",
     textAlign: "center",
-    fontSize: "38px"
+    fontSize: "38px",
+    marginBottom: '20px'
   }
 };
 
@@ -115,11 +116,11 @@ const Checkout = props => {
         <p style={styles.title}>Sign Up</p>
         <form className="signupform" onSubmit={handleSignUpSubmit}>
           <p>Please enter your email</p>
-          <input ref={signUpEmailRef} style={styles.inputStyle} />
+          <input placeholder='Please enter email' ref={signUpEmailRef} style={styles.inputStyle} />
           <p>Password</p>
-          <input ref={signUpPasswordRef} style={styles.inputStyle} />
+          <input placeholder='Please enter password' ref={signUpPasswordRef} style={styles.inputStyle} />
           <p>Confirm Password</p>
-          <input ref={signUpConfirmPasswordRef} style={styles.inputStyle} />
+          <input placeholder='Please confirm password' ref={signUpConfirmPasswordRef} style={styles.inputStyle} />
           <button className="signInBtn" type="submit">
             Sign up & Checkout
           </button>
@@ -127,12 +128,12 @@ const Checkout = props => {
       </div>
       <div className="divdivider" style={styles.divider} />
       <div className="loginContainer">
-        <p style={styles.title}>Sign In</p>
+        <p className='signInTitle'>Sign In</p>
         <form className="signinform" onSubmit={handleSubmit}>
           <p>Email</p>
-          <input ref={emailRef} style={styles.inputStyle} />
+          <input placeholder='Please enter email' ref={emailRef} style={styles.inputStyle} />
           <p>Password</p>
-          <input ref={passwordRef} style={styles.inputStyle} />
+          <input placeholder='Please enter password' ref={passwordRef} style={styles.inputStyle} />
           <p>Forgot password?</p>
           <p className="signininfo">
             By signing in to your account, you agree to our{" "}

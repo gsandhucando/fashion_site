@@ -67,16 +67,22 @@
   line-height: 60px;
 }
 .signinform input {
+  width: 50%;
+  margin-top: 5px;
+  height: 30px;
   border: 1px solid #333;
 }
 
 .signupform {
   display: flex;
   flex-direction: column;
-  line-height: 60px;
+  line-height: 40px;
 }
 
 .signupform input {
+  width: 50%;
+  margin-top: 5px;
+  height: 30px;
   border: 1px solid #333;
 }
 
@@ -96,10 +102,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* width: 100%; */
-  /* padding-top: 100px; */
-  /* margin-left: 50px; */
-  /* line-height: 2.2em; */
+  margin-bottom: 20px;
 }
 .checkoutContainer {
   display: flex;
@@ -111,7 +114,7 @@
 }
 .signInBtn {
   border: none;
-  height: 50px;
+  height: 100px;
   width: 200px;
   background: black;
   color: white;
@@ -127,6 +130,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.signInTitle{
+  display: flex;
+  text-align: center;
+  font-size: 38px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -255,6 +263,12 @@ only screen and (-webkit-min-device-pixel-ratio: 1.5) {
     height: 100vh;
     width: 100vw;
   }
+  .signInTitle{
+    display: flex;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: -20px;
+  }
   .contactFormBtn {
     height: 50px;
     width: 150px;
@@ -286,6 +300,7 @@ only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   .loginContainer {
     width: 100vw;
     line-height: 10px;
+    margin: 0;
   }
   .signupform {
     width: 100vw;
@@ -313,7 +328,11 @@ only screen and (-webkit-min-device-pixel-ratio: 1.5) {
 }
 
 @media only screen and (max-width: 400px) {
-
+  /* .signinform {
+    width: 100vw;
+    height: 40vh;
+    margin-bottom: 40px;
+  } */
   .cartContainer {
     display: flex;
     flex-direction: column;

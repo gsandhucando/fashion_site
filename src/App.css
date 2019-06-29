@@ -233,16 +233,6 @@
 @media only screen and (max-width:400px),
 only screen and (-webkit-min-device-pixel-ratio: 1.5) {
 
-  .itemDropdown {
-    position: absolute;
-    top: 100%;
-    left: 20%;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .itemSelect {
     display: flex;
   }

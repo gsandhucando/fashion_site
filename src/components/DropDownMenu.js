@@ -17,13 +17,13 @@ let styles = {
     justifyContent: "space-between",
     padding: 10,
     marginRight: 40,
-    border: '1px solid black',
-    background: 'white',
-    color: 'black'
+    border: "1px solid black",
+    background: "white",
+    color: "black"
   },
   sizeChoices: {
     height: 50,
-    width: '100%',
+    width: "100%",
     background: "white"
   },
   sizeTextContent: {
@@ -33,19 +33,17 @@ let styles = {
   }
 };
 
-const DropDownMenu = ({setCurrentSize}) => {
+const DropDownMenu = ({ setCurrentSize }) => {
   let [open, setOpen] = useState(false);
   let [size, setSize] = useState("Size");
 
   let handleOpen = event => {
     event.preventDefault();
-    console.log("opening", !open);
 
     setOpen(!open);
   };
 
   let handleClose = event => {
-    console.log("closing", open);
     setOpen(false);
   };
 
@@ -54,7 +52,6 @@ const DropDownMenu = ({setCurrentSize}) => {
     setCurrentSize(event.target.innerHTML);
     setSize(event.target.innerHTML);
     setOpen(false);
-
   };
 
   return (

@@ -23,11 +23,8 @@ const Item = props => {
   let [currentSize, setCurrentSize] = useState("S");
   let [quantity, setQuantity] = useState(1);
 
-  console.log(props);
-
   let checkoutPreview = () => {
     setToggleClick(true);
-    console.log("clicked");
   };
 
   let exitCheckoutPreview = () => {
@@ -39,10 +36,8 @@ const Item = props => {
 
   let id = props.match.params.id;
 
-  console.log(props, "modal");
-
   return (
-    <div className='itemSelect' style={styles.item}>
+    <div className="itemSelect" style={styles.item}>
       {toggleClick ? (
         <Modal
           quantity={quantity}

@@ -1,20 +1,21 @@
-import React, { useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import Items from "../components/Items";
-import axios from 'axios';
-
+import axios from "axios";
 
 const Hoodies = () => {
-  let [ hoodies, setHoodies ] = useState([])
+  let [hoodies, setHoodies] = useState([]);
 
-  useEffect(()=> {
-    axios.get('/api/items?category=hoodies')
-    .then(res => {
-      if (res.status !== 200) {
-        throw new Error(res.data.message)
-      }
-      setHoodies(res.data)
-    }).catch((err) => console.log(err))
-  }, [])
+  useEffect(() => {
+    axios
+      .get("/api/items?category=hoodies")
+      .then(res => {
+        if (res.status !== 200) {
+          throw new Error(res.data.message);
+        }
+        setHoodies(res.data);
+      })
+      .catch(err => console.log(err));
+  }, []);
 
   return (
     <div className="shirt-container">

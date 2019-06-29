@@ -50,8 +50,8 @@ let styles = {
     width: "60%"
   },
   title: {
-    display: 'flex',
-    textAlign: 'center',
+    display: "flex",
+    textAlign: "center",
     fontSize: "38px"
   }
 };
@@ -109,9 +109,9 @@ const Checkout = props => {
   };
 
   return (
-    <div className="checkoutContainer" >
+    <div className="checkoutContainer">
       <p>{errorMessage}</p>
-      <div className='loginContainer' >
+      <div className="loginContainer">
         <p style={styles.title}>Sign Up</p>
         <form className="signupform" onSubmit={handleSignUpSubmit}>
           <p>Please enter your email</p>
@@ -120,13 +120,13 @@ const Checkout = props => {
           <input ref={signUpPasswordRef} style={styles.inputStyle} />
           <p>Confirm Password</p>
           <input ref={signUpConfirmPasswordRef} style={styles.inputStyle} />
-          <button className='signInBtn' type="submit" >
+          <button className="signInBtn" type="submit">
             Sign up & Checkout
           </button>
         </form>
       </div>
       <div className="divdivider" style={styles.divider} />
-      <div className='loginContainer' >
+      <div className="loginContainer">
         <p style={styles.title}>Sign In</p>
         <form className="signinform" onSubmit={handleSubmit}>
           <p>Email</p>
@@ -134,11 +134,11 @@ const Checkout = props => {
           <p>Password</p>
           <input ref={passwordRef} style={styles.inputStyle} />
           <p>Forgot password?</p>
-          <p className='signininfo'>
+          <p className="signininfo">
             By signing in to your account, you agree to our{" "}
             <span>Privacy Policy</span> and <span>Terms & Conditions.</span>
           </p>
-          <button className='signInBtn' type="submit" >
+          <button className="signInBtn" type="submit">
             Sign in & Checkout
           </button>
         </form>

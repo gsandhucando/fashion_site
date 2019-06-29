@@ -34,7 +34,7 @@ let styles = {
     width: "100%",
     height: "50px",
     fontSize: "20px",
-    padding: "0px 15px",
+    padding: "0px 15px"
   }
 };
 
@@ -55,12 +55,10 @@ const DropDownColorMenu = ({ handleColor, menu, setCurrentId }) => {
 
   let onSelectSize = (event, color, id) => {
     event.preventDefault();
-    console.log(event.target.childNodes);
     setColor(color);
-    setCurrentId(id)
+    setCurrentId(id);
     handleColor(color);
     setOpen(false);
-    console.log(color, 'dropdownmenu');
   };
 
   return (
@@ -69,7 +67,9 @@ const DropDownColorMenu = ({ handleColor, menu, setCurrentId }) => {
         {color} {ChevronDown}
       </button>
       {open ? (
-        <div style={{ display: "flex", flexDirection: "column", height: '160px' }}>
+        <div
+          style={{ display: "flex", flexDirection: "column", height: "160px" }}
+        >
           <h5 style={styles.colorTextContent}>Please select a color</h5>
           <button className="colorChoise">
             {menu.map(item => {
@@ -79,7 +79,7 @@ const DropDownColorMenu = ({ handleColor, menu, setCurrentId }) => {
                   onClick={e => onSelectSize(e, item.color, item._id)}
                   style={styles.colorSelect}
                 >
-                  <img src={item.button} alt=''/>
+                  <img src={item.button} alt="" />
                   <span ref={colorRef}>{item.color}</span>
                 </button>
               );

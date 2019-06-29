@@ -18,7 +18,7 @@ import axios from "axios";
 
 let store = createStore(userReducer);
 
-let getUser = (dispatch) => {
+let getUser = dispatch => {
   if (document.cookie.length > 0) {
     let id = document.cookie.slice(12, -3);
     axios
@@ -27,19 +27,16 @@ let getUser = (dispatch) => {
         if (response.status !== 200) {
           throw new Error(response.data.message);
         }
-        dispatch({type: "CHANGE_USER", payload: response.data})
+        dispatch({ type: "CHANGE_USER", payload: response.data });
       })
       .catch(err => console.log(err));
   }
 };
 
-
-
-let MainApp = (props) => {
-  console.log(props, '*********mainapp');
-  useEffect(()=> {
-    props.getUser()
-  }, [])
+let MainApp = props => {
+  useEffect(() => {
+    props.getUser();
+  }, []);
 
   return (
     <div>
@@ -71,22 +68,24 @@ let MainApp = (props) => {
   );
 };
 
-
-let MapStateToProps = (state) => {
-  return{
+let MapStateToProps = state => {
+  return {
     user: state.user
-  }
-}
+  };
+};
 
-let MapDispatchToProps = (dispatch) => {
-  return{
+let MapDispatchToProps = dispatch => {
+  return {
     getUser: () => {
-      getUser(dispatch)
+      getUser(dispatch);
     }
-  }
-}
+  };
+};
 
-MainApp = connect(MapStateToProps, MapDispatchToProps)(MainApp)
+MainApp = connect(
+  MapStateToProps,
+  MapDispatchToProps
+)(MainApp);
 
 const WrapperApp = () => {
   return (

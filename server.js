@@ -87,7 +87,6 @@ passport.use(
 
 app.post("/login", passport.authenticate("local"), function(req, res) {
   console.log("login in");
-  console.log(req.session, "*********session");
   const user = { email: req.user.email, id: req.user._id, cart: req.user.cart };
   res.cookie("user", user.id, { maxAge: 5000000 });
   res.json({ message: "login was successful", user });

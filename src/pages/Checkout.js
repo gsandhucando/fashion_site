@@ -18,24 +18,24 @@ let styles = {
     marginLeft: "50px",
     lineHeight: "4.3em"
   },
-  loginContainer: {
-    display: "flex",
-    flexDirection: "column",
-    // margin: '120px',
-    width: "100%",
-    paddingTop: "100px",
-    marginLeft: "50px",
-    lineHeight: "2.2em"
-  },
-  signInBtn: {
-    border: "none",
-    height: "50px",
-    width: "200px",
-    background: "black",
-    color: "white",
-    fontSize: "20px",
-    marginTop: "10px"
-  },
+  // loginContainer: {
+  //   display: "flex",
+  //   flexDirection: "column",
+  //   // margin: '120px',
+  //   width: "100%",
+  //   paddingTop: "100px",
+  //   marginLeft: "50px",
+  //   lineHeight: "2.2em"
+  // },
+  // signInBtn: {
+  //   border: "none",
+  //   height: "50px",
+  //   width: "200px",
+  //   background: "black",
+  //   color: "white",
+  //   fontSize: "20px",
+  //   marginTop: "10px"
+  // },
   divider: {
     position: "absolute",
     height: "60vh",
@@ -109,9 +109,9 @@ const Checkout = props => {
   };
 
   return (
-    <div className="checkoutContainer" style={styles.checkoutContainer}>
+    <div className="checkoutContainer" >
       <p>{errorMessage}</p>
-      <div className='loginContainer' style={styles.loginContainer}>
+      <div className='loginContainer' >
         <p style={styles.title}>Sign Up</p>
         <form className="signupform" onSubmit={handleSignUpSubmit}>
           <p>Please enter your email</p>
@@ -120,13 +120,13 @@ const Checkout = props => {
           <input ref={signUpPasswordRef} style={styles.inputStyle} />
           <p>Confirm Password</p>
           <input ref={signUpConfirmPasswordRef} style={styles.inputStyle} />
-          <button type="submit" style={styles.signInBtn}>
+          <button className='signInBtn' type="submit" >
             Sign up & Checkout
           </button>
         </form>
       </div>
       <div className="divdivider" style={styles.divider} />
-      <div className='loginContainer' style={styles.loginContainer}>
+      <div className='loginContainer' >
         <p style={styles.title}>Sign In</p>
         <form className="signinform" onSubmit={handleSubmit}>
           <p>Email</p>
@@ -138,7 +138,7 @@ const Checkout = props => {
             By signing in to your account, you agree to our{" "}
             <span>Privacy Policy</span> and <span>Terms & Conditions.</span>
           </p>
-          <button type="submit" style={styles.signInBtn}>
+          <button className='signInBtn' type="submit" >
             Sign in & Checkout
           </button>
         </form>

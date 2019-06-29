@@ -76,6 +76,32 @@
   margin-bottom: 10px;
   align-items: center
 }
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* width: 100%; */
+  /* padding-top: 100px; */
+  /* margin-left: 50px; */
+  /* line-height: 2.2em; */
+}
+.checkoutContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  padding-left: 20px;
+  /* background: yellowgreen; */
+}
+.signInBtn {
+  border: none;
+  height: 50px;
+  width: 200px;
+  background: black;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+}
 
 @media only screen and (max-width: 600px) {
   .logoName {
@@ -183,14 +209,49 @@
     /* background: red; */
     border: 1px solid black;
   }
+  .loginContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+    line-height: 1.0em;
+    /* margin-bottom: 0px; */
+  }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+@media only screen and (max-width:400px),
+only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .checkoutContainer {
+    height: 100%;
+    width: 100vw;
+    margin-top: 20px;
+  }
   .loginContainer {
-    width: 100%;
-    padding-top: 100px;
-    margin-left: 50px;
-    line-height: 2.2em;
+    width: 100vw;
+    line-height: 10px;
+  }
+  .signupform {
+    width: 100vw;
+    height: 40vh;
+    margin-bottom: 40px;
+  }
+  .signinform {
+    margin-top: 30px;
+    height: 60vh;
+  }
+  .signinform input {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .signInBtn {
+    border: none;
+    height: 50px;
+    width: 200px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
   }
 }
 

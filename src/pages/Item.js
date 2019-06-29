@@ -7,12 +7,6 @@ import Modal from "../components/Modal";
 const ChevronLeft = <FontAwesomeIcon icon={faChevronLeft} />;
 
 const styles = {
-  item: {
-    display: "grid",
-    // justifyContent: "center",
-    gridTemplateColumns: "1fr 2fr 1fr"
-    // background: 'salmon'
-  },
   button: {
     height: 50,
     width: 130,
@@ -48,7 +42,7 @@ const Item = props => {
   console.log(props, "modal");
 
   return (
-    <div style={styles.item}>
+    <div className='itemSelect' style={styles.item}>
       {toggleClick ? (
         <Modal
           quantity={quantity}

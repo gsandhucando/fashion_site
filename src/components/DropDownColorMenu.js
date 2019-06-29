@@ -32,7 +32,6 @@ let styles = {
     display: "flex",
     justifyContent: "space-between",
     width: "100%",
-    background: "yellow",
     height: "50px",
     fontSize: "20px",
     padding: "0px 15px",

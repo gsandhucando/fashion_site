@@ -75,7 +75,7 @@ const Contact = () => {
         <input className='contactInput' required='required' type='email' placeholder='Please enter email' />
         <p>Message<span style={{color: 'red'}}>*</span></p>
         <textarea type='text' className='contactTextarea' placeholder='Please enter message' />
-        <button onClick={messageSent} style={styles.submitBtn}>Send Message</button>
+        <button className='contactFormBtn' onClick={messageSent} style={styles.submitBtn}>Send Message</button>
       </form>
       }
     </div>

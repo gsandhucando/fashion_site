@@ -10,8 +10,19 @@
 }
 
 .colorChoise {
-  height: 165px;
+  height: 170px;
   width: 100%;
+}
+
+.contactFormBtn {
+  height: 120px;
+  width: 150px;
+  border: none;
+  background: #333;
+  color: white;
+  margin: 10px;
+  padding: 5px;
+  font-size: 1.0em;
 }
 
 .homePageCenterDiv {
@@ -237,6 +248,23 @@
 
 @media only screen and (max-width:400px),
 only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  .contactFormBtn {
+    height: 50px;
+    width: 150px;
+    border: none;
+    background: #333;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.0em;
+  }
   .homepagetext {
     font-size: 20px;
   }

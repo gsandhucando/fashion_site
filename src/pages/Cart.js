@@ -123,7 +123,7 @@ let Cart = props => {
         <div className="totalDiv">
           <h4 style={{ borderBottom: "1px solid black" }}>Total</h4>
           <h4>${total.toFixed(2)}</h4>
-          <Link>
+          <Link to='/checkout'>
             <button style={styles.checkoutBtn}>Checkout</button>
           </Link>
         </div>

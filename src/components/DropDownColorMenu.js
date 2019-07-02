@@ -21,11 +21,13 @@ let styles = {
   },
   colorChoise: {
     height: 50,
-    width: "100%"
+    width: "100%",
+
   },
   colorTextContent: {
     display: "flex",
     justifyContent: "center",
+    paddingBottom: '20px',
     border: "1px solid grey"
   },
   colorSelect: {
@@ -34,7 +36,8 @@ let styles = {
     width: "100%",
     height: "50px",
     fontSize: "20px",
-    padding: "0px 15px"
+    padding: "10px",
+    borderTop: '1px solid black'
   }
 };
 
@@ -62,7 +65,7 @@ const DropDownColorMenu = ({ handleColor, menu, setCurrentId }) => {
   };
 
   return (
-    <div onMouseLeave={handleClose} style={styles.colorContainer}>
+    <div onClick={handleClose} style={styles.colorContainer}>
       <button style={styles.colorBtn} onClick={handleOpen}>
         {color} {ChevronDown}
       </button>
@@ -71,20 +74,20 @@ const DropDownColorMenu = ({ handleColor, menu, setCurrentId }) => {
           style={{ display: "flex", flexDirection: "column", height: "160px" }}
         >
           <h5 style={styles.colorTextContent}>Please select a color</h5>
-          <button className="colorChoise">
+          <div className="colorChoise">
             {menu.map(item => {
               return (
-                <button
+                <div
                   key={item.color}
                   onClick={e => onSelectSize(e, item.color, item._id)}
                   style={styles.colorSelect}
                 >
                   <img src={item.button} alt="" />
                   <span ref={colorRef}>{item.color}</span>
-                </button>
+                </div>
               );
             })}
-          </button>
+          </div>
         </div>
       ) : null}
     </div>

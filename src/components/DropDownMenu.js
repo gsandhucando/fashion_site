@@ -21,11 +21,6 @@ let styles = {
     background: "white",
     color: "black"
   },
-  sizeChoices: {
-    height: 50,
-    width: "100%",
-    background: "white"
-  },
   sizeTextContent: {
     display: "flex",
     justifyContent: "center",
@@ -44,7 +39,7 @@ const DropDownMenu = ({ setCurrentSize }) => {
   };
 
   let handleClose = event => {
-    setOpen(false);
+    setOpen(!open);
   };
 
   let onSelectSize = event => {
@@ -55,25 +50,25 @@ const DropDownMenu = ({ setCurrentSize }) => {
   };
 
   return (
-    <div onMouseLeave={handleClose} style={styles.sizeContainer}>
-      <button style={styles.sizeBtn} onClick={handleOpen}>
+    <div onClick={handleClose} style={styles.sizeContainer}>
+      <div style={styles.sizeBtn} onClick={handleOpen}>
         {size} {ChevronDown}
-      </button>
+      </div>
       {open ? (
         <div style={{ display: "flex", flexDirection: "column" }}>
           <h5 style={styles.sizeTextContent}>Please select a size</h5>
-          <button onClick={onSelectSize} style={styles.sizeChoices}>
+          <div className='sizeChoices' onClick={onSelectSize}>
             S
-          </button>
-          <button onClick={onSelectSize} style={styles.sizeChoices}>
+          </div>
+          <div className='sizeChoices' onClick={onSelectSize}>
             M
-          </button>
-          <button onClick={onSelectSize} style={styles.sizeChoices}>
+          </div>
+          <div className='sizeChoices' onClick={onSelectSize}>
             L
-          </button>
-          <button onClick={onSelectSize} style={styles.sizeChoices}>
+          </div>
+          <div className='sizeChoices' onClick={onSelectSize}>
             XL
-          </button>
+          </div>
         </div>
       ) : null}
     </div>

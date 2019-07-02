@@ -9,6 +9,37 @@
   text-align: center;
 }
 
+.sizeChoices {
+  height: auto;
+  width: 100%;
+  background: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sizeChoices:hover {
+  background: rgb(109, 109, 109);
+  color: white;
+}
+
+.colorSelect {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  padding: 10px;
+  border-top: 1px solid black;
+  cursor: pointer;
+}
+
+.colorSelect:hover {
+  background: rgb(109, 109, 109);
+  color: white;
+}
+
 .colorChoise {
   height: auto;
   width: 100%;
@@ -152,6 +183,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
   }
   .itemsContinerDiv {
     flex-wrap: wrap;
@@ -480,8 +512,7 @@ only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   flex-direction: row;
   text-align: center;
   flex-wrap: wrap;
-  align-items: center;
-  margin: 10px;
+  margin-top: 10px;
   width: 100%;
 }
 

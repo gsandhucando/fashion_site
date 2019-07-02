@@ -30,15 +30,6 @@ let styles = {
     paddingBottom: '20px',
     border: "1px solid grey"
   },
-  colorSelect: {
-    display: "flex",
-    justifyContent: "space-between",
-    width: "100%",
-    height: "50px",
-    fontSize: "20px",
-    padding: "10px",
-    borderTop: '1px solid black'
-  }
 };
 
 const DropDownColorMenu = ({ handleColor, menu, setCurrentId }) => {
@@ -78,9 +69,9 @@ const DropDownColorMenu = ({ handleColor, menu, setCurrentId }) => {
             {menu.map(item => {
               return (
                 <div
+                className='colorSelect'
                   key={item.color}
                   onClick={e => onSelectSize(e, item.color, item._id)}
-                  style={styles.colorSelect}
                 >
                   <img src={item.button} alt="" />
                   <span ref={colorRef}>{item.color}</span>

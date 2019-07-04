@@ -37,7 +37,7 @@ const Item = props => {
   let id = props.match.params.id;
 
   return (
-    <div className="itemSelect" style={styles.item}>
+    <div className="itemSelect">
       {toggleClick ? (
         <Modal
           quantity={quantity}

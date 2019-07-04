@@ -153,10 +153,10 @@
   font-size: 20px;
   margin-top: 10px;
 }
-.itemSelect {
+/* .itemSelect {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-}
+  grid-template-columns: 1fr 1fr 1fr;
+} */
 .itemDropdown {
   justify-content: center;
   display: flex;
@@ -320,6 +320,10 @@ only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   }
   .itemSelect {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 30px;
   }
   .itemContainerDiv {
     display: flex;

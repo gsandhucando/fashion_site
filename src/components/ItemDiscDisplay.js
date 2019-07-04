@@ -61,7 +61,7 @@ const ItemDiscDisplay = ({ items, id, price, toggleClick, setCurrentId, setCurre
         </p>
       </div>
       <div style={styles.btnContainers}>
-        {price > 200 ? null : <DropDownMenu setCurrentSize={setCurrentSize} quantity={setQuantity} />}
+        {price > 200 ? null : <DropDownMenu items={items} setCurrentSize={setCurrentSize} quantity={setQuantity} />}
         <DropDownColorMenu handleColor={setColor} setCurrentId={setCurrentId} menu={items.menu} />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <input

@@ -28,7 +28,7 @@ let styles = {
   }
 };
 
-const DropDownMenu = ({ setCurrentSize }) => {
+const DropDownMenu = ({ setCurrentSize, items }) => {
   let [open, setOpen] = useState(false);
   let [size, setSize] = useState("Size");
 
@@ -49,7 +49,10 @@ const DropDownMenu = ({ setCurrentSize }) => {
     setOpen(false);
   };
 
+  console.log(items)
   return (
+    <>
+    {items.price < 200 ?
     <div onClick={handleClose} style={styles.sizeContainer}>
       <div style={styles.sizeBtn} onClick={handleOpen}>
         {size} {ChevronDown}
@@ -72,6 +75,8 @@ const DropDownMenu = ({ setCurrentSize }) => {
         </div>
       ) : null}
     </div>
+    : null }
+    </>
   );
 };
 

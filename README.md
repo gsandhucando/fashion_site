@@ -4,6 +4,8 @@ on checkout page use:
 e-mail: guest@guest.com
 password: 123456
 
+if using guest@guest.com items might already be in cart depending on previous use
+
 or sign up once you hit enter login with the same info the mlab database is slow so you might have to relogin a couple times
 
 thanks Gurjot

@@ -1,17 +1,5 @@
-https://sonu-fashion.herokuapp.com/ <---hosted project, its a little slow because of the free herokuapp so it might take some time loading up data or a reload of the page. when checking out sign up with an email and password then use that to sign in right after.
+https://sonu-fashion.herokuapp.com/ <---hosted project
 
-on checkout page use:
-e-mail: guest@guest.com
-password: 123456
+Technologies Used: ReactJS, HTML5, CSS3, NodeJS, ExpressJS, MongoDB, Mongoose, Redux, fontAwesome, axios, bcrypt, passport local strategy.
 
-if using guest@guest.com items might already be in cart depending on previous use
-
-or sign up once you hit enter login with the same info the mlab database is slow so you might have to relogin a couple times
-
-thanks Gurjot
-
-Created this project using: Front-end: react react-router-dom redux css font awesome
-
-Back-end: axios express mongoDB mongoose passport bcrypt cors
-
-I personaly designed it myself to show my ability to create the front end while adding authentication and storing custom data, usernames and cookies that keep track of each user that is created and what is in there cart.
+It's a little slow because of the free herokuapp so it might take some time loading up data. I created and designed my own shopping site with figma with a few changes from the original render. I created the data.json for the project with links to the clothing with prices, names, categories and referencing colors then pushed it to mongoDB using the item model. On checkout you can sign in using e-mail: guest@guest.com password: 123456. There might be items already in the cart depending on previous use. You can also sign up then use the same information used to sign up to sign in, this might take some time because of the free herokuapp. I used passport local strategy for authentication with a session cookie that keeps track of each user and last a day on your computer. I had to use redux to show the number of items in the cart at all times and in mobile view in the hamburger menu the number of items are also shown at all times.
